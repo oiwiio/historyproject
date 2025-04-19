@@ -1,0 +1,142 @@
+body {
+    background-color: saddlebrown;
+    background: linear-gradient(90deg,rgba(139, 69, 19, 1) 20%, rgba(168, 86, 27, 1) 55%, rgba(117, 65, 25, 1) 90%);
+}
+
+header {
+    display: flex;
+    background-color: SaddleBrown;
+    background: linear-gradient(90deg,rgba(139, 69, 19, 1) 20%, rgba(168, 86, 27, 1) 55%, rgba(117, 65, 25, 1) 90%);
+    min-width: auto;
+    min-height: 90px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow:0 0 20px gray;
+    border-radius: 20px;
+    
+}
+    .name {
+        display: flex; 
+        border: 2px solid black; 
+        border-radius: 30px;
+        font-size: 30px;
+        justify-content: space-around;
+        margin-top: 5px;  
+        padding-left: 10px;
+        padding-right: 10px;
+        color: black;
+
+            transition: color 0.8s ease-in-out;
+            transition: font-size 0.5s ease;
+
+    }   
+        .name:hover{   
+            color: Orchid;
+            font-size: 35px;
+            border-color: Orchid;
+            box-shadow:0 0 20px gray;
+        }
+
+
+    .logo{
+        display: flex; 
+        border: 2px solid black; 
+        border-radius: 30px;
+        font-size: 20px;
+        max-width: 350px;
+        justify-content: space-around; 
+        padding: 5px;
+        margin-bottom: 3px;
+        
+            transition: color 0.8s ease-in-out;
+            transition: font-size 0.5s ease;
+    } 
+            .logo:hover{
+                color: Orchid;
+                font-size: 25px;
+                border-color: Orchid;
+                box-shadow:0 0 20px gray;
+            }
+
+                    main{
+                        display: flex;
+                        justify-content: space-around;
+
+                        }
+            
+        .map {
+            display: flex;
+            border: 2px solid saddlebrown;
+            min-height: 500px;
+            min-width: 1500px;
+            justify-content: space-around;
+            margin-top: 100px;
+            padding: 50px;
+
+    }
+
+        .map_1 {
+            background-color:RosyBrown;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            border: 3px solid saddlebrown;
+                width: 500px;
+                height: 500px;
+                transition: width 1s, height 2s;
+        }
+            .map_1:hover{
+                box-shadow:0 0 20px black;
+                width: 550px;
+                height: 550px;
+            }
+            
+            .logo_map_1 {
+                text-align: center;
+                height: 45px;
+                min-width: 450px;
+                border: 2px solid gray;
+                background-color: gray;
+            }
+
+            .blockinfo {
+                background-color: rgba(0, 0, 0, 0.5); 
+                min-width: 300px;
+                text-align: center;
+
+            }
+
+        .map_2 {
+            background-color: RosyBrown;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            box-shadow:0 0 20px black;
+            border: 3px solid saddlebrown;
+                border-color:saddlebrown ;
+                transition: border-color 0.8s ease-in-out;
+                transition: box-shadow 0.8s ease-in-out;
+
+        }
+            .map_2:hover{
+                box-shadow:0 0 20px blue;
+                border-color: blue;
+            }
+            
+            .logo_map_2 {
+                text-align: center;
+                height: 45px;
+                min-width: 450px;
+                border: 2px solid gray;
+                background-color: gray;
+            }
+
+            footer {
+                background-color: darkred;
+                height: 100px;
+            }
+            .end {
+                font-size: 20px;
+                text-align: center;
+                margin-top: 250px;
+            }
