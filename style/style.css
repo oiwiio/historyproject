@@ -19,120 +19,123 @@ header {
     
 }
 .name {
-        display: flex; 
-        border: 2px solid black; 
-        border-radius: 30px;
-        font-size: 30px;
-        justify-content: space-around;
-        margin-top: 5px;  
-        padding-left: 10px;
-        padding-right: 10px;
-        color: black;
-            transition: font-size 0.5s ease;
+    display: flex; 
+    border: 2px solid black; 
+    border-radius: 30px;
+    font-size: 30px;
+    justify-content: space-around;
+    margin-top: 5px;  
+    padding-left: 10px;
+    padding-right: 10px;
+    color: black;
+    transition: font-size 0.5s ease;
 
-    }   
- .name:hover{   
+}
+
+.name:hover{   
     color: Orchid;
     font-size: 35px;
     border-color: Orchid;
     box-shadow:0 0 20px gray;
-    }
+}
 
 
- .logo{
-     display: flex; 
-     border: 2px solid black; 
-     border-radius: 30px;
-     font-size: 20px;
-     max-width: 350px;
-     justify-content: space-around; 
-     padding: 5px;
-     margin-bottom: 3px;
-        transition: font-size 0.5s ease;
-    } 
-   .logo:hover{
-      color: Orchid;
-      font-size: 25px;
-      border-color: Orchid;
-      box-shadow:0 0 20px gray;
-            }
-
-    main{
-      display: flex;
-      justify-content: space-around;
-
-                        }    
-    .map {
-     display: flex;
-     min-height: 500px;
-     min-width: 1500px;
-     justify-content: space-around;
-     margin-top: 100px;
-     padding: 50px;
-
-    }
-
-    .map_1 {
-        background-color: RosyBrown;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        box-shadow:0 0 20px black;
-        border: 3px solid saddlebrown;
-          border-color:saddlebrown ;
-          transition: box-shadow 0.6s ease-in-out; 
-          width: 500px;
-          height: 500px;
-          transition: width 1s, height 2s;
+.logo{
+    display: flex; 
+    border: 2px solid black; 
+    border-radius: 30px;
+    font-size: 20px;
+    max-width: 350px;
+    justify-content: space-around; 
+    padding: 5px;
+    margin-bottom: 3px;
+    transition: font-size 0.5s ease;
+} 
+.logo:hover{
+    color: Orchid;
+    font-size: 25px;
+    border-color: Orchid;
+    box-shadow:0 0 20px gray;
         }
-    .map_1:hover{
-        box-shadow:0 0 20px white;
-        width: 520px;
-        height: 520px;
-            }
-            
-    .logo_map_1 {
-     text-align: center;
-     height: 45px;
-     min-width: 450px;
-     border: 2px solid gray;
-     background-color: gray;
-            }
+
+main{
+    display: flex;
+    justify-content: space-around;
+
+                    }    
+.map {
+    display: flex;
+    min-height: 500px;
+    min-width: 1500px;
+    justify-content: space-around;
+    margin-top: 100px;
+    padding: 50px;
+
+}
+
+.map_1 {
+    background-color: RosyBrown;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    box-shadow:0 0 20px black;
+    border: 3px solid saddlebrown;
+    border-color:saddlebrown ;
+    transition: box-shadow 0.6s ease-in-out; 
+    width: 500px;
+    height: 500px;
+    transition: width 1s, height 2s;
+}
+
+.map_1:hover{
+    box-shadow:0 0 20px white;
+    width: 520px;
+    height: 520px;
+        }
+        
+.logo_map_1 {
+    text-align: center;
+    height: 45px;
+    min-width: 450px;
+    border: 2px solid gray;
+    background-color: gray;
+}
     
 .blockinfo {
     overflow-wrap: break-word;
     background-color: rgba(0, 0, 0, 0.5); 
     min-width: 300px;
     text-align: center;
+} 
 
-         } 
-    .map_2 {
-      background-color: RosyBrown;
-      margin-top: 5px;
-      margin-bottom: 5px;
-      box-shadow:0 0 20px black;
-      border: 3px solid saddlebrown;
-        border-color:saddlebrown ;
-        transition: box-shadow 0.6s ease-in-out; 
-        width: 500px;
-        height: 500px;
-        transition: width 1s, height 2s;
+.map_2 {
+    background-color: RosyBrown;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    box-shadow:0 0 20px black;
+    border: 3px solid saddlebrown;
+    border-color:saddlebrown ;
+    transition: box-shadow 0.6s ease-in-out; 
+    width: 500px;
+    height: 500px;
+    transition: width 1s, height 2s;
 
-        }
-     .map_2:hover{
-          box-shadow:0 0 20px white;
-          width: 520px;
-          height: 520px;
-            }
-            
-     .logo_map_2 {
-         text-align: center;
-         height: 45px;
-         min-width: 450px;
-         border: 2px solid gray;
-         background-color: gray;
-            }
+}
 
- footer {
+.map_2:hover{
+    box-shadow:0 0 20px white;
+    width: 520px;
+    height: 520px;
+}
+
+.logo_map_2 {
+    text-align: center;
+    height: 45px;
+    min-width: 450px;
+    border: 2px solid gray;
+    background-color: gray;
+}
+
+footer {
     display: flex;
     background-color: SaddleBrown;
     height: 100px;
@@ -140,5 +143,5 @@ header {
     box-shadow:0 0 20px gray;
     align-items: center;
     justify-content: space-around;
-    }
+}
 
