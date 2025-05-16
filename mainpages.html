@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="../historyproject/style/style.css"> 
+    <!-- ниче,привыкнешь-->
+    <!-- а будешь выебыватся,я ещё и js файл закину-->
+    <!--СУКА, Я ЕБАЛ. Я пытался файлом работать, иди нахуй, это ебаный пиздец. Отныне будем только так писать. Не иначе -->
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-left">
+            <div class="logo">
+                <span class="logo-icon">👁️</span>
+                <span class="logo-text">Народники</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-link active">Карта маршрута убийства Александра Сани 2</a>
+                <a href="#" class="nav-link">Народники, где они обитают</a>
+            </nav>
+        </div>
+        <div class="header-right">
+            <button class="create-btn" onclick="window.location.href='creater.html'">Создатели </button>
+        </div>
+    </header>
+    <div class="container">
+        <a href="map1.html" class="image-link" target="_blank">
+            <img src="../historyproject/img/Aleksandr_2.jpg" alt="Левая картинка">
+        </a>
+        <a href="map2.html" class="image-link" target="_blank">
+            <img src="../historyproject/img/Петербург.jpeg" alt="Правая картинка">
+        </a>
+    </div>
+    <div class="info-window">
+        <div class="info-text" id="infoText">
+            Наведите на кнопки, чтобы увидеть информацию
+        </div>
+    </div>
+
+    <script>
+        const leftButton = document.querySelector('.image-link:first-child');
+        const rightButton = document.querySelector('.image-link:last-child');
+        const infoText = document.getElementById('infoText');
+
+        
+        leftButton.addEventListener('mouseenter', () => {
+            infoText.textContent = 'тут саню убивают';
+        });
+
+        leftButton.addEventListener('mouseleave', () => {
+            infoText.textContent = 'Наведите на кнопки, чтобы увидеть информацию';
+        });
+
+        
+        rightButton.addEventListener('mouseenter', () => {
+            infoText.textContent = 'а тут крыс вычесляют';
+        });
+
+        rightButton.addEventListener('mouseleave', () => {
+            infoText.textContent = 'Наведите на кнопки, чтобы увидеть информацию';
+        });
+    </script>
+    <script>
+        document.getElementById("myButton").addEventListener("click", function() {
+          window.location.href = "creater.html";
+        });
+      </script>
+</body>
+</html>
