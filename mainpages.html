@@ -4,12 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная страница</title>
-    <link rel="stylesheet" href="../historyproject/style/style.css"> 
-    <!-- ниче,привыкнешь-->
-    <!-- а будешь выебыватся,я ещё и js файл закину-->
-    <!--СУКА, Я ЕБАЛ. Я пытался файлом работать, иди нахуй, это ебаный пиздец. Отныне будем только так писать. Не иначе -->
+    <link rel="stylesheet" href="../historyproject/style/style.css">
 </head>
-<body>
+<body> 
     <header class="main-header">
         <div class="header-left">
             <div class="logo">
@@ -17,12 +14,12 @@
                 <span class="logo-text">Народники</span>
             </div>
             <nav class="nav-menu">
-                <a href="#" class="nav-link active">Карта маршрута убийства Александра Сани 2</a>
+                <a href="#" class="nav-link active">Карта маршрута убийства Александра II</a>
                 <a href="#" class="nav-link">Народники, где они обитают</a>
             </nav>
         </div>
         <div class="header-right">
-            <button class="create-btn" onclick="window.location.href='creater.html'">Создатели </button>
+            <button class="create-btn" onclick="window.location.href='creater.html'">Создатели</button>
         </div>
     </header>
     <div class="container">
@@ -44,28 +41,21 @@
         const rightButton = document.querySelector('.image-link:last-child');
         const infoText = document.getElementById('infoText');
 
-        
         leftButton.addEventListener('mouseenter', () => {
-            infoText.textContent = 'тут саню убивают';
+            infoText.textContent = 'Тут Саню убивают';
         });
 
         leftButton.addEventListener('mouseleave', () => {
             infoText.textContent = 'Наведите на кнопки, чтобы увидеть информацию';
         });
 
-        
         rightButton.addEventListener('mouseenter', () => {
-            infoText.textContent = 'а тут крыс вычесляют';
+            infoText.textContent = 'А тут крыс вычисляют';
         });
 
         rightButton.addEventListener('mouseleave', () => {
             infoText.textContent = 'Наведите на кнопки, чтобы увидеть информацию';
         });
     </script>
-    <script>
-        document.getElementById("myButton").addEventListener("click", function() {
-          window.location.href = "creater.html";
-        });
-      </script>
 </body>
 </html>
