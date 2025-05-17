@@ -19,14 +19,14 @@
             </nav>
         </div>
         <div class="header-right">
-            <button class="create-btn" onclick="window.location.href='creater.html'">Создатели</button>
+            <button class="create-btn" onclick="window.location.href='../historyproject/pages/creater.html'">Создатели</button>
         </div>
     </header>
     <div class="container">
-        <a href="map1.html" class="image-link" target="_blank">
+        <a href="../historyproject/pages/map1.html" class="image-link" target="_blank">
             <img src="../historyproject/img/Aleksandr_2.jpg" alt="Левая картинка">
         </a>
-        <a href="map2.html" class="image-link" target="_blank">
+        <a href="../historyproject/pages/map2.html" class="image-link" target="_blank">
             <img src="../historyproject/img/Петербург.jpeg" alt="Правая картинка">
         </a>
     </div>
@@ -57,5 +57,10 @@
             infoText.textContent = 'Наведите на кнопки, чтобы увидеть информацию';
         });
     </script>
+    <script>
+    document.getElementById("myButton").addEventListener("click", function() {
+      window.location.href = "creater.html";
+    });
+  </script>
 </body>
 </html>
