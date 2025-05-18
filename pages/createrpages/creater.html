@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../createrpages/style/style.css">
+</head>
+<body>
+<header class="main-header">
+        <div class="header-left">
+            <div class="logo">
+                <span class="logo-icon">🌚🌑🌒🌓🌔🌕🌝 </span>
+                <span class="logo-text">Народники,карта терорестической деяельности</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <button class="create-btn">Назад на главную</button>
+        </div>
+    </header>
+<main>
+    <div class="cont">
+        <div class="creater_1" data-bg="url(https://media1.tenor.com/m/8lB0rqq6UrgAAAAC/griffguts-griffith.gif)">
+            <div class="ava_1">
+                <img src="../createrpages/img/grifith.jpg">
+                <p> oiwiio </p>
+                <li><a href="https://t.me/oiwiio" class="telegram-link1" target="_blank">Telegram</a></li>
+                    <li><a href="https://discord.com/users/oiwiio" class="discord-link" target="_blank">Discord</a></li>    
+            </div>
+        </div>
+        <div class="creater_2" data-bg="url(https://media1.tenor.com/m/0gXuev-ZUWwAAAAd/saber-alter-salter.gif)" >
+            <div class="ava_2">
+                <img src="../createrpages/img/OberonFate_Grand_Order.jfif">
+                <p> Vonderfull </p>
+                    <li><a href="https://t.me/DevilSatu" class="telegram-link2" target="_blank">Telegram</a></li>
+                    <li><a href="https://discord.com/users/vonderpower" class="discord-link" target="_blank">Discord</a></li>
+            </div>
+        </div>
+        <div class="creater_3" data-bg="url(https://media1.tenor.com/m/pIxX5-SlHigAAAAd/stalcraft.gif)">
+            <div class="ava_3">
+                <img src="../createrpages/img/lol.jpg">
+                    <p> M1nt </p>
+                    <li><a href="https://t.me/Mintyyysts" class="telegram-link3" target="_blank">Telegram</a></li>
+                    <li><a href="https://discord.com/users/mintyyysts" class="discord-link" target="_blank">Discord</a></li>
+            </div>
+        </div>
+    </div> 
+</main> 
+
+<footer>
+    
+</footer> 
+  <script>
+document.querySelectorAll('.creater_1, .creater_2, .creater_3').forEach(creator => {
+    creator.addEventListener('mouseenter', function() {
+        document.body.style.background = this.dataset.bg;
+    });
+    creator.addEventListener('mouseleave', function() {
+        document.body.style.background = '';
+    });
+});
+</script>
+<script>
+
+const creators = [
+    { element: document.querySelector('.creater_1'), bg: 'url(https://media1.tenor.com/m/8lB0rqq6UrgAAAAC/griffguts-griffith.gif)' },
+    { element: document.querySelector('.creater_2'), bg: 'url(https://media1.tenor.com/m/0gXuev-ZUWwAAAAd/saber-alter-salter.gif' },
+    { element: document.querySelector('.creater_3'), bg: 'url(https://media1.tenor.com/m/pIxX5-SlHigAAAAd/stalcraft.gif)' }
+];
+
+
+creators.forEach(creator => {
+    creator.element.addEventListener('mouseenter', () => {
+        document.body.classList.add('body-bg-animation');
+        document.body.style.background = creator.bg;
+        document.body.style.backgroundSize = 'cover';
+        document.body.style.backgroundPosition = 'center';
+        document.body.style.backgroundAttachment = 'fixed';
+    });
+    
+    creator.element.addEventListener('mouseleave', () => {
+        document.body.classList.remove('body-bg-animation');
+        document.body.style.background = '';
+    });
+});
+</script>
+<script>
+
+document.querySelector('.create-btn').addEventListener('click', function() {
+    window.history.back();
+});
+</script>
+</body>
+</html> 
+
