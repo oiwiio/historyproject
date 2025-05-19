@@ -260,7 +260,7 @@ body {
 
 .telegram-link3:hover {
     color: black;
-    background: rgba(153, 50, 204);
+    background:#4169E1;
     transform: translateY(-2px);
 }
 

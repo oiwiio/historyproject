@@ -263,4 +263,54 @@ body {
     gap: 12px;
     flex-wrap: wrap;
  }
+} 
+.modal-btn{
+    padding: 10px 20px ;
+    background: #4b0082;
+    color: white ;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.modal-btn:hover{
+    background: #00ff00;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+} 
+.modal-content {
+    background:linear-gradient(135deg, #1e2a3a, #121a24);
+    margin: 10% auto;
+    padding: 25px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+    color: white;
+    border: 1px solid #2d3b4e;
+
+}
+.close-btn{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #aaa;
+    transition: color 0.3s;
+}
+.close-btn:hover{
+    color: white;
 }

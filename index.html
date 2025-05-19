@@ -31,32 +31,16 @@
             Наведите на кнопки, чтобы увидеть информацию
         </div>
     </div>
-
-    <script>
-        const leftButton = document.querySelector('.image-link:first-child');
-        const rightButton = document.querySelector('.image-link:last-child');
-        const infoText = document.getElementById('infoText');
-
-        leftButton.addEventListener('mouseenter', () => {
-            infoText.textContent = 'Тут Саню убивают';
-        });
-
-        leftButton.addEventListener('mouseleave', () => {
-            infoText.textContent = 'Наведите на кнопки, чтобы увидеть информацию';
-        });
-
-        rightButton.addEventListener('mouseenter', () => {
-            infoText.textContent = 'А тут крыс вычисляют';
-        });
-
-        rightButton.addEventListener('mouseleave', () => {
-            infoText.textContent = 'Наведите на кнопки, чтобы увидеть информацию';
-        });
-    </script>
-    <script>
-    document.getElementById("myButton").addEventListener("click", function() {
-      window.location.href = "creater.html"; 
-    });
-  </script>
+    <footer>
+        <button class="modal-btn"> нажми на меня, семпай!! </button>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                    <h2> logo-modal-window</h2>
+                <p> сюда можно че угодно пихнуть </p>
+            </div>
+        </div>
+    </footer>
+<script src="../historyproject/js/js.js"></script>
 </body>
 </html>
