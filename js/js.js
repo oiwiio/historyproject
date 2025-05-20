@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const infoText = document.getElementById('infoText');
 
     leftButton.addEventListener('mouseenter', () => {
-        infoText.textContent = 'Тут Саню убивают';
+        infoText.textContent = 'Последние минуты до смерти Александра II ';
     });
 
     leftButton.addEventListener('mouseleave', () => {
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     rightButton.addEventListener('mouseenter', () => {
-        infoText.textContent = 'А тут крыс вычисляют';
+        infoText.textContent = 'Области,где вели свою деятельность Народники';
     });
 
     rightButton.addEventListener('mouseleave', () => {
