@@ -48,7 +48,7 @@ body {
      }
  }
 
-.main-header {
+header {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -257,22 +257,22 @@ body {
         max-width: 500px;
     }
 
-.main-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-    padding: 16px;
-}
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 16px;
+    }
 
-.header-left, .header-right {
-    width: 100%;
-    justify-content: space-between;
-}
+    .header-left, .header-right {
+        width: 100%;
+        justify-content: space-between;
+    }
 
-.nav-menu {
-    gap: 12px;
-    flex-wrap: wrap;
- }
+    .nav-menu {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
 } 
 .modal-btn{
     padding: 10px 20px ;
@@ -334,4 +334,79 @@ body {
     padding: 10px;
     font-family: cursive;
     font-size: 20px;
+}
+
+/* Адаптивность */
+@media screen and (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .image-link {
+        width: 90%;
+        max-width: 600px;
+    }
+
+    .image-link img {
+        width: 100%;
+        height: auto;
+    }
+
+    .header {
+        padding: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .header-title {
+        font-size: 1.2rem;
+        margin-right: 0;
+    }
+
+    .preface {
+        width: 90%;
+        margin: 20px auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-buttons {
+        margin-top: 10px;
+    }
+
+    .header-btn {
+        padding: 6px 16px;
+        font-size: 0.9rem;
+    }
+
+    .preface p {
+        font-size: 0.9rem;
+    }
+
+    .info-window {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header-title {
+        font-size: 1rem;
+    }
+
+    .header-btn {
+        padding: 5px 12px;
+        font-size: 0.8rem;
+    }
+
+    .preface p {
+        font-size: 0.8rem;
+    }
 }

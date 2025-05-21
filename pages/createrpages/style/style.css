@@ -47,7 +47,7 @@ body {
      }
  }
 
-.main-header {
+header {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -56,13 +56,23 @@ body {
     align-items: center;
     padding: 16px 32px;
     border-radius: 0 0 16px 16px;
-    background: linear-gradient(rgba(78, 106, 230, 0.0) 60%, );
+    background: linear-gradient(0deg,  
+        rgb(8, 112, 248) 40%,   
+        rgba(78, 106, 230, 0.5) 60%,   
+        rgb(0, 0, 0) 100%      
+    );
+    animation: 
+        fire-move 15s linear infinite,
+        fire-pulse 5s ease-in-out infinite alternate;
+    background-size: 200% 200%;
+    background-position: 0% 0%;
     box-shadow: 
         0 4px 20px rgba(0, 0, 0, 0.3), 
         inset 0 1px 1px rgba(255, 255, 255, 0.05); 
     backdrop-filter: blur(4px);       
     color: #fff;
     position: relative;
+    z-index: 1000;
 }
 @keyframes rainbowBorder {
     0% { border-color: #ff0000; }
@@ -139,7 +149,7 @@ body {
         max-width: 500px;
     }
 
-.main-header {
+.header {
    /* flex-direction: column; */
     align-items: flex-start;
     gap: 16px;
@@ -171,12 +181,11 @@ body {
 
 
 
-.ava_1 img, .ava_2 img, .ava_3 img {
-    width: 160px;
-    height: 160px;
-    object-fit: cover;
+.ava_1 img, .ava_2 img, .ava_3 img, .ava_4 img {
+    width: 220px; 
+    height: 220px;
     border-radius: 50%;
-    border: 3px solid rgba(255, 255, 255, 0.2);
+    object-fit: cover;
 }
 
 .creater_1, .creater_2, .creater_3, .creater_4 {
@@ -311,13 +320,69 @@ body {
     background-size: contain;
 } 
 
-.ava_1 img, .ava_2 img, .ava_3 img, .ava_4 img {
-    width: 220px; 
-    height: 220px; 
-}
-
-
 .creater_1:hover, .creater_2:hover, .creater_3:hover, .creater_4:hover {
     transform: translateY(-5px) scale(1.05); 
     z-index: 10; 
+}
+
+/* Адаптивность */
+@media screen and (max-width: 1200px) {
+    .team-container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .team-member {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .header-title {
+        font-size: 1.2rem;
+        margin: 10px 0;
+    }
+
+    .header-buttons {
+        margin-top: 10px;
+    }
+
+    .header-btn {
+        padding: 6px 16px;
+        font-size: 0.9rem;
+    }
+
+    .team-member {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header-title {
+        font-size: 1rem;
+    }
+
+    .header-btn {
+        padding: 5px 12px;
+        font-size: 0.8rem;
+    }
+
+    .team-member {
+        padding: 15px;
+    }
+
+    .team-member h2 {
+        font-size: 1.2rem;
+    }
+
+    .team-member p {
+        font-size: 0.9rem;
+    }
 }
