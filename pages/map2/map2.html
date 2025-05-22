@@ -7,26 +7,37 @@
 </head>
 <body>
     <header>
-         <!-- Лого донт ворк. Сделай так, чтобы было ворк -->
-        <div class="logo-image-container">
-            <img src="../historyproject/img/russaimp.jpg" alt="Логотип">
+    <div class="header-left">
+        <div class="logo">
+            <div class="logo-image-container">
+                <img src="../../img/russaimp.jpg" alt="Логотип">
+            </div>
+            <span class="logo-text">Где были,эти Народники </span>
         </div>
-        <span class="header-title">Народники, карта террористической деятельности</span>
-        <div class="header-buttons">
-            <a href="../createrpages/creater.html" class="header-btn">Команда</a>
-            <a href="../../index.html" class="header-btn">На главную</a>
-        </div>
-    </header>
+    </div>
+<div class="header-buttons">
+    <a href="../createrpages/creater.html" class="header-btn">Команда</a>
+    <a href="../../index.html" class="header-btn">На главную</a>
+</div>
+</header>
     <!-- Просто добавим потом сюда текст -->
     <div class="center-block">
         <div class="left-section">
-
-
         </div>
+
+       <div id="map" style="width: 100%; height: 100%;"></div>
         <div class="bottom-section">
-            <h1>ЛАЛАЛАЛА</h1>
             
         </div>
     </div>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=YOUR_API_KEY&lang=ru_RU" type="text/javascript"></script>
+    <script>
+        ymaps.ready(function () {
+            var map = new ymaps.Map('map', {
+                center: [55.76, 37.64],
+                zoom: 10
+            });
+        });
+    </script>
 </body>
 </html>

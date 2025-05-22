@@ -171,6 +171,7 @@ header {
     align-items: center;
     gap: 32px;
 }
+
 .logo {
     display: flex;
     align-items: center;
@@ -179,6 +180,7 @@ header {
     font-size: 1.1rem;
     letter-spacing: 1px;
 }
+    
 .logo-image-container {
     width: 60px; 
     height: 60px; 

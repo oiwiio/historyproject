@@ -6,33 +6,139 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <header>
-        <div class="logo-image-container">
-            <img src="../historyproject/img/russaimp.jpg" alt="Логотип">
-        </div>
-        <span class="header-title">Народники, карта террористической деятельности</span>
-        <div class="header-buttons">
-            <a href="../createrpages/creater.html" class="header-btn">Команда</a>
-            <a href="../../index.html" class="header-btn">На главную</a>
-        </div>
-    </header>
-    <div class="center-block">
-        <div class="left-section">
-            <!-- Тут будет инфа по карте, либо хуйня, которую пихнет гоша в модальные окна-->
-            <h1> Инфа по карте</h1>
-        </div>
-        <div class="center-bottom">
-            <!-- ниже будет карта-->
-            <h1>Карта</h1>
-        </div>
-        <div class="info-section">
-            
-            <h1>Место для временной шкалы</h1>
-        </div>
-        <div class="bottom-section">
-            <!-- Нахуя я сделал нижний блок под инфу? - Моятвоянеебать, надо будет туда что-то пихнуть-->
-            <h1>Инфа по модал окнам</h1>
+<header>
+    <div class="header-left">
+        <div class="logo">
+            <div class="logo-image-container">
+                <img src="../../img/russaimp.jpg" alt="Логотип">
+            </div>
+            <span class="logo-text">Последний маршрут Александра II </span>
         </div>
     </div>
+<div class="header-buttons">
+    <a href="../createrpages/creater.html" class="header-btn">Команда</a>
+    <a href="../../index.html" class="header-btn">На главную</a>
+</div>
+</header>
+    <div class="center-block">
+        <div class="left-section">
+<!-- Тут будет инфа по карте, либо хуйня, которую пихнет гоша в модальные окна-->
+            <h1> Инфа по карте</h1>
+        </div>
+    <div class="center-bottom">
+        <div id="map" style="width: 100%; height: 100%;"></div>
+    </div>
+        <div class="info-section">      
+            <h1>Место для временной шкалы</h1>
+        </div>
+            <div class="bottom-section">
+<!-- Нахуя я сделал нижний блок под инфу? - Моятвоянеебать, надо будет туда что-то пихнуть-->
+                <h1>Инфа по модал окнам</h1>
+            </div>
+    </div>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=YOUR_API_KEY&lang=ru_RU" type="text/javascript"></script>
+<script>
+ymaps.ready(function () {
+    var map = new ymaps.Map('map', {
+        center: [59.9375, 30.3086], // Координаты центра Санкт-Петербурга
+        zoom: 11, // Увеличенный зум для лучшего обзора города
+        controls: ['zoomControl', 'fullscreenControl'] // Добавляем только нужные элементы управления
+    });
+
+    // Добавляем метки на карту
+var placemarks = [
+    {
+        coords: [59.9404, 30.3139], // 1
+        properties: {
+            hintContent: 'Зимний дворец / Дворцовая площадь',
+            balloonContent: 'Район Зимнего дворца'
+        }
+    },
+{
+    coords: [59.9398, 30.3188], // 2
+    properties: {
+        hintContent: 'Марсово поле',
+        balloonContent: 'Марсово поле'
+    }
+},
+{
+    coords: [59.9304, 30.3191], // 3
+    properties: {
+        hintContent: 'Садовая улица (место первой бомбы)',
+        balloonContent: 'Место первого взрыва'
+    }
+},
+{
+    coords: [59.9342, 30.3382], // 4
+    properties: {
+        hintContent: 'Набережная канала Грибоедова / Конюшенная улица (место второй бомбы)',
+        balloonContent: 'Место убийства Александра II'
+    }
+},
+ {
+     coords: [59.9342, 30.3352], // 5
+     properties: {
+         hintContent: 'Казанский собор',
+         balloonContent: 'Район Казанского собора'
+     }
+},
+ { coords: [0, 0], properties: { hintContent: '', balloonContent: '' } }, // 6
+ { coords: [0, 0], properties: { hintContent: '', balloonContent: '' } }, // 7
+ { coords: [0, 0], properties: { hintContent: '', balloonContent: '' } }, // 8
+ { coords: [0, 0], properties: { hintContent: '', balloonContent: '' } }, // 9
+ { coords: [0, 0], properties: { hintContent: '', balloonContent: '' } }, // 10
+ { coords: [0, 0], properties: { hintContent: '', balloonContent: '' } }, // 11
+ { coords: [0, 0], properties: { hintContent: '', balloonContent: '' } }, // 12
+ { coords: [0, 0], properties: { hintContent: '', balloonContent: '' } }, // 13
+ { coords: [0, 0], properties: { hintContent: '', balloonContent: '' } }, // 14
+ { coords: [0, 0], properties: { hintContent: '', balloonContent: '' } }  // 15 к первой перемещается
+    ];
+
+ placemarks.forEach(function (obj) {
+     var placemark = new ymaps.Placemark(obj.coords, obj.properties);
+     map.geoObjects.add(placemark);
+ });
+
+// добавляем обработчик клика на карту для добавления новых меток
+map.events.add('click', function (e) {
+    if (!map.balloon.isOpen()) {
+        var coords = e.get('coords');
+        map.balloon.open(coords, {
+            contentHeader:'Новая метка',
+            contentBody:'<p>Координаты: ' + [
+                coords[0].toPrecision(6),
+                coords[1].toPrecision(6)
+            ].join(', ') + '</p>',
+            contentFooter:''
+        });
+    }
+    else {
+        map.balloon.close();
+    }
+});
+
+ // Добавляем возможность добавления метки при клике на балун
+ map.events.add('balloonopen', function (e) {
+     var balloon = e.get('balloon');
+     var coords = balloon.getPosition();
+
+     var addButton = '<button id="addPlacemark">Добавить метку</button>';
+     balloon.setContent(balloon.getContent() + addButton);
+     document.getElementById('addPlacemark').addEventListener('click', function(){
+         var myPlacemark = new ymaps.Placemark(coords, {
+             // Здесь можно добавить опции метки, например, иконку или контент
+             // iconContent: 'Метка',
+             // balloonContent: 'Описание метки'
+         }, {
+             // Опции для отображения метки
+             // preset: 'islands#icon',
+             // iconColor: '#0095b6'
+         });
+         map.geoObjects.add(myPlacemark);
+         map.balloon.close();
+     });
+ });
+});
+    </script>
 </body>
 </html>
