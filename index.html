@@ -3,55 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная страница</title>
+    <title>Приветствие</title>
+    <link rel="icon" href="../historyproject/img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../historyproject/style/style.css">
+    <link rel="stylesheet" href="../style/style.css">
 </head>
-<body> 
- <header>
-     <div class="header-left">
-         <div class="logo">
-             <div class="logo-image-container">
-         <img src="../historyproject/img/russaimp.jpg" alt="Логотип">
-     </div>
-         <span class="logo-text">Народники, карта террористической деятельности</span>
-     </div>
-     </div>
-     <div class="header-right">
-         <button class="create-btn" onclick="window.location.href='../historyproject/pages/createrpages/creater.html'">Команда</button>
-     </div>
- </header> 
-    
- <div class="preface"> 
-     <p>Народники – это участники общественного движения в Российской империи второй половины XIX века, 
-         выступавшие за социальную справедливость и свержение самодержавия. 
-         Они верили, что крестьянская община может стать основой социализма в России, 
-         и пытались вовлечь народ в революционную борьбу 
-     </p>
- </div>
-    
-<div class="container">
-    <a href="pages/map1/map1.html" class="image-link">
-        <img src="img/Aleksandr_2.jpg" alt="Левая картинка">
-    </a>
-    <a href="pages/map2/map2.html" class="image-link">
-        <img src="img/Петербург.jpeg" alt="Правая картинка">
-    </a>
-</div>
-<div class="info-window">
-    <div class="info-text" id="infoText">
-        Наведите на кнопки, чтобы увидеть информацию
+<body>
+    <div class="welcome-container">
+        <h1 class="welcome-title">Добро пожаловать!</h1>
+        <p class="welcome-text">
+            Этот проект посвящен истории народнического движения в России.<br>
+            Нажмите кнопку ниже, чтобы начать изучение.
+        </p>
+        <button class="baton" onclick="window.location.href='../historyproject/main/main.html'">
+            Начать путешествие
+            <span class="arrow">→</span>
+        </button>
     </div>
-</div>
-<footer>
-    <button class="modal-btn"> ? </button>
-    <div class="modal" id="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-                <h2> Поздравляю! ВЫ получили достижение! </h2>
-            <p> найти секретную кнопку на странице  </p>
-        </div>
-    </div>
-</footer>
-<script src="../historyproject/js/js.js"></script>
+    
+    <footer class="welcome-footer">
+        <p>Исторический проект © 2025</p>
+    </footer>
+    <script>
+        document.querySelector('.baton').addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetUrl = '../historyproject/main/main.html';
+            
+            document.body.style.animation = 'fadeOut 0.5s ease-out forwards';
+            
+            setTimeout(() => {
+                window.location.href = targetUrl;
+            }, 500);
+        });
+    </script>
 </body>
 </html>
