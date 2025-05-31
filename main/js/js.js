@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const infoText = document.getElementById('infoText');
 
     leftButton.addEventListener('mouseenter', () => {
-        infoText.textContent = 'Последние минуты до смерти Александра II ';
+        infoText.textContent = 'Последние день из жизни Александра II ';
     });
 
     leftButton.addEventListener('mouseleave', () => {
@@ -37,5 +37,15 @@ document.addEventListener("DOMContentLoaded", function() {
                 modal.style.display = "none";
             }
         });
+    } 
+    const themeSwitcher = document.getElementById('themeSwitcher');
+    if (themeSwitcher) {
+        themeSwitcher.addEventListener('click', () => {
+            document.body.classList.toggle('blue-theme');
+            localStorage.setItem('theme', document.body.classList.contains('blue-theme') ? 'blue' : 'red');
+        });
+        if (localStorage.getItem('theme') === 'blue') {
+            document.body.classList.add('blue-theme');
+        }
     }
 });

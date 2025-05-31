@@ -3,25 +3,41 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root {
+  --color-bg1: #ffe6d2;
+  --color-bg2: #f59664;
+  --color-bg3: #e6513e;
+  --color-bg4: #9b0c12;
+  --color-bg5: #5d090a;
+  --color-text: #fff;
+}
 body {
    margin: 0;
    padding: 0;
    min-height: 100vh;
    background: linear-gradient(0deg, 
-        rgba(255, 230, 210, 1) 0%,  
-        rgba(245, 150, 100, 1) 20%, 
-        rgba(230, 81, 62, 1) 40%,   
-        rgba(155, 12, 18, 1) 60%,   
-        rgba(93, 9, 10, 1) 80%      
+        var(--color-bg1) 0%,  
+        var(--color-bg2) 20%, 
+        var(--color-bg3) 40%,   
+        var(--color-bg4) 60%,   
+        var(--color-bg5) 80%      
     );
    animation: 
       fire-move 15s linear infinite,
       fire-pulse 5s ease-in-out infinite alternate;
    background-size: 200% 200%;
    background-position: 0% 0%;
-   color: white;
+   color: var(--color-text);
     font-family: Arial, sans-serif;
      }
+body.blue-theme {
+  --color-bg1: #eaf6fb;
+  --color-bg2: #468af7;
+  --color-bg3: #185adb;
+  --color-bg4: #0a2342;
+  --color-bg5: #0a2342;
+  --color-text: #fff;
+}
 @keyframes fire-move {
     0%, 100% {
         background-position: 0% 10%;
@@ -411,4 +427,88 @@ header {
     .preface p {
         font-size: 0.8rem;
     }
+}
+
+.theme-switcher {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #185adb 0%, #468af7 100%);
+  box-shadow: 0 2px 8px rgba(24,90,219,0.15);
+  cursor: pointer;
+  margin-left: 18px;
+  transition: background 0.3s;
+  position: relative;
+}
+.theme-switcher::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" fill="white"/><path d="M12 2V4" stroke="#185adb" stroke-width="2" stroke-linecap="round"/><path d="M12 20V22" stroke="#185adb" stroke-width="2" stroke-linecap="round"/><path d="M4.93 4.93L6.34 6.34" stroke="#185adb" stroke-width="2" stroke-linecap="round"/><path d="M17.66 17.66L19.07 19.07" stroke="#185adb" stroke-width="2" stroke-linecap="round"/><path d="M2 12H4" stroke="#185adb" stroke-width="2" stroke-linecap="round"/><path d="M20 12H22" stroke="#185adb" stroke-width="2" stroke-linecap="round"/><path d="M4.93 19.07L6.34 17.66" stroke="#185adb" stroke-width="2" stroke-linecap="round"/><path d="M17.66 6.34L19.07 4.93" stroke="#185adb" stroke-width="2" stroke-linecap="round"/></svg>') no-repeat center/contain;
+  position: absolute;
+  left: 10px; top: 10px;
+}
+.theme-switcher:hover {
+  background: linear-gradient(135deg, #468af7 0%, #185adb 100%);
+} 
+body.blue-theme .theme-switcher {
+  background: linear-gradient(135deg, #fff 0%, #eaf6fb 100%);
+}
+body.blue-theme {
+  --color-bg1: #f5f9fc;
+  --color-bg2: #e1edf7;
+  --color-bg3: #c5dbf0;
+  --color-bg4: #7ba4d4;
+  --color-bg5: #4a7ab8;
+  --color-text: #000;
+}
+
+body.blue-theme header {
+  background: linear-gradient(0deg, 
+    rgba(139, 178, 214, 0.95) 0%,     
+    rgba(139, 178, 214, 0.9) 50%,     
+    rgba(139, 178, 214, 0.85) 100%    
+  );
+}
+
+body.blue-theme .create-btn {
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+}
+
+body.blue-theme .create-btn:hover {
+  background: white;
+  color: #000;
+}
+
+body.blue-theme .info-window {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+body.blue-theme .info-text {
+  color: #000;
+}
+
+body.blue-theme .modal-content {
+  background: linear-gradient(135deg, #e1edf7, #c5dbf0);
+  color: #000;
+  border: 1px solid #7ba4d4;
+}
+
+body.blue-theme .close-btn {
+  color: #666;
+}
+
+body.blue-theme .close-btn:hover {
+  color: #000;
+}
+
+body.blue-theme .logo-text {
+  color: #000;
+}
+
+body.blue-theme .logo-text:hover {
+  color: #4a7ab8;
 }

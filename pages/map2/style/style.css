@@ -1,20 +1,44 @@
+:root {
+  --color-bg1: #ffe6d2;
+  --color-bg2: #f59664;
+  --color-bg3: #e6513e;
+  --color-bg4: #9b0c12;
+  --color-bg5: #5d090a;
+  --color-text: #fff;
+  --color-header: rgba(80, 10, 10, 0.95);
+  --color-btn-bg: #fff;
+  --color-btn-text: #b71c1c;
+  --color-link: #fff;
+}
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     min-height: 100vh;
     background: linear-gradient(0deg, 
-        rgba(255, 230, 210, 1) 0%,  
-        rgba(245, 150, 100, 1) 20%, 
-        rgba(230, 81, 62, 1) 40%,   
-        rgba(155, 12, 18, 1) 60%,   
-        rgba(93, 9, 10, 1) 80%      
+        var(--color-bg1) 0%,  
+        var(--color-bg2) 20%, 
+        var(--color-bg3) 40%,   
+        var(--color-bg4) 60%,   
+        var(--color-bg5) 80%      
     );
     animation: 
         fire-move 15s linear infinite,
         fire-pulse 5s ease-in-out infinite alternate;
     background-size: 200% 200%;
     background-position: 0% 0%;
-    color: white;
+    color: var(--color-text);
+}
+body.blue-theme {
+  --color-bg1: #f5f9fc;
+  --color-bg2: #e1edf7;
+  --color-bg3: #c5dbf0;
+  --color-bg4: #7ba4d4;
+  --color-bg5: #4a7ab8;
+  --color-text: #000;
+  --color-header: #8bb2d6;
+  --color-btn-bg: #fff;
+  --color-btn-text: #000;
+  --color-link: #000;
 }
 
 @keyframes fire-move {
@@ -53,11 +77,7 @@ header {
     align-items: center;
     padding: 16px 32px;
     border-radius: 0 0 16px 16px;
-    background: linear-gradient(0deg, 
-        rgba(80, 10, 10, 0.95) 0%,     
-        rgba(130, 20, 20, 0.9) 50%,     
-        rgba(180, 40, 35, 0.85) 100%    
-    );
+    background: var(--color-header);
     box-shadow: 
         0 4px 20px rgba(0, 0, 0, 0.3), 
         inset 0 1px 1px rgba(255, 255, 255, 0.05); 
@@ -96,7 +116,7 @@ header {
 }
 .logo-text {
     font-size: 20px;
-    color: whitesmoke;
+    color: var(--color-link);
     padding-left: 0px;
     transition: color 0.3s ease-in-out;
 
@@ -110,7 +130,7 @@ header {
     gap: 24px;
 }
 .nav-link {
-    color: #fff;
+    color: var(--color-link);
     text-decoration: none;
     font-size: 1rem;
     opacity: 0.9;
@@ -125,25 +145,29 @@ header {
 .header-buttons {
     display: flex;
     gap: 12px;
-} 
+    position: relative;
+    z-index: 2;
+}
 .header-btn {
-    background: #fff;
-    color: #b71c1c;
+    background: var(--color-btn-bg);
+    color: var(--color-btn-text);
     border: none;
     border-radius: 20px;
-    padding: 8px 22px;
+    padding: 10px 24px;
     font-size: 1rem;
     font-weight: bold;
     text-decoration: none;
-    transition: background 0.2s, color 0.2s;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
     cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    margin: 0 5px;
 }
-
 .header-btn:hover {
-    background: #b71c1c;
-    color: #fff;
-} 
+    background: var(--color-btn-text);
+    color: var(--color-btn-bg);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}  
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -295,4 +319,32 @@ header {
     .bottom-section {
         height: 120px;
     }
+}
+
+.theme-switcher {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #185adb 0%, #468af7 100%);
+  box-shadow: 0 2px 8px rgba(24,90,219,0.15);
+  cursor: pointer;
+  margin-left: 18px;
+  transition: background 0.3s;
+  position: relative;
+}
+body.blue-theme .theme-switcher {
+  background: linear-gradient(135deg, #fff 0%, #eaf6fb 100%);
+}
+.theme-switcher::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" fill="white"/><path d="M12 2V4" stroke="#185adb" stroke-width="2" stroke-linecap="round"/><path d="M12 20V22" stroke="#185adb" stroke-width="2" stroke-linecap="round"/><path d="M4.93 4.93L6.34 6.34" stroke="#185adb" stroke-width="2" stroke-linecap="round"/><path d="M17.66 17.66L19.07 19.07" stroke="#185adb" stroke-width="2" stroke-linecap="round"/><path d="M2 12H4" stroke="#185adb" stroke-width="2" stroke-linecap="round"/><path d="M20 12H22" stroke="#185adb" stroke-width="2" stroke-linecap="round"/><path d="M4.93 19.07L6.34 17.66" stroke="#185adb" stroke-width="2" stroke-linecap="round"/><path d="M17.66 6.34L19.07 4.93" stroke="#185adb" stroke-width="2" stroke-linecap="round"/></svg>') no-repeat center/contain;
+  position: absolute;
+  left: 10px; top: 10px;
+}
+body.blue-theme .theme-switcher::before {
+  background: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" fill="#185adb"/><path d="M12 2V4" stroke="#fff" stroke-width="2" stroke-linecap="round"/><path d="M12 20V22" stroke="#fff" stroke-width="2" stroke-linecap="round"/><path d="M4.93 4.93L6.34 6.34" stroke="#fff" stroke-width="2" stroke-linecap="round"/><path d="M17.66 17.66L19.07 19.07" stroke="#fff" stroke-width="2" stroke-linecap="round"/><path d="M2 12H4" stroke="#fff" stroke-width="2" stroke-linecap="round"/><path d="M20 12H22" stroke="#fff" stroke-width="2" stroke-linecap="round"/><path d="M4.93 19.07L6.34 17.66" stroke="#fff" stroke-width="2" stroke-linecap="round"/><path d="M17.66 6.34L19.07 4.93" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>') no-repeat center/contain;
 }

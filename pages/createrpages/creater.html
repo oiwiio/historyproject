@@ -11,14 +11,14 @@
 </head>
 <body>
 <header class="main-header">
-        <div class="header-left">
-            <div class="logo">
-                <span class="logo-icon"> :) </span>
-                <span class="logo-text">  Революционеры сайта </span>
+         <div class="logo">
+            <div class="logo-image-container">
+                <img src="../../img/russaimp.jpg" alt="Логотип">
             </div>
-        </div>
+            <p> Революционеры сайта </p>
         <div class="header-right">
             <button class="create-btn">Назад на главную</button>
+            <button class="theme-switcher" id="themeSwitcher" title="Сменить тему"></button>
         </div>
     </header>
 <main>
@@ -98,6 +98,7 @@ document.querySelector('.create-btn').addEventListener('click', function() {
     window.history.back();
 });
 </script>
+<script src="js.js"></script>
 </body>
 </html> 
 

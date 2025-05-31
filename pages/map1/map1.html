@@ -20,7 +20,8 @@
     </div>
 <div class="header-buttons">
     <a href="../createrpages/creater.html" class="header-btn">Команда</a>
-    <a href="../../index.html" class="header-btn">На главную</a>
+    <a href="../../main/main.html" class="header-btn">На главную</a>
+    <button class="theme-switcher" id="themeSwitcher" title="Сменить тему"></button>
 </div>
 </header>
     <div class="center-block">
@@ -31,14 +32,79 @@
     <div class="center-bottom">
         <div id="map" style="width: 100%; height: 100%;"></div>
     </div>
-        <div class="info-section">      
-            <h1>Место для временной шкалы</h1>
+       <div class="info-section">  <!--  scale  -->
+            <input type="range" class="range" min="0" max="150" value="0" step="10" />
         </div>
-            <div class="bottom-section">
-<!-- Нахуя я сделал нижний блок под инфу? - Моятвоянеебать, надо будет туда что-то пихнуть-->
-                <h1>Инфа по модал окнам</h1>
-            </div>
+      <div class="bottom-section">
+          <p>ФИО участников заговора: </p>
+          <ul class="conspirators-list">
+          <li><button class="conspirator-btn" data-target="modal-grinevitsky">Игнатий Гриневицкий (Метельский)</button></li>
+          <li><button class="conspirator-btn" data-target="modal-rysakov">Николай Рысаков</button></li>
+          <li><button class="conspirator-btn" data-target="modal-perovskaya">Софья Перовская</button></li>
+          <li><button class="conspirator-btn" data-target="modal-zhelyabov">Андрей Желябов</button></li>
+          <li><button class="conspirator-btn" data-target="modal-reserves">Запасные метальщики</button></li>
+      </ul>
+  </div>
+<div id="modal-grinevitsky" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Игнатий Гриневицкий</h2>
+        <p> - Роль: Бросил вторую бомбу, смертельно ранившую императора.  </p>
+        <p> - Место: Стоял у решетки Екатерининского канала (канал Грибоедова). </p>  
+        <p> - Действия: Когда Александр II подошёл ближе, 
+            Гриневицкий бросил бомбу под ноги царю. 
+            Взрывом императору оторвало ноги, 
+            а сам террорист получил смертельные ранения и умер в тот же день.
+        </p> 
+        
     </div>
+</div>
+
+<div id="modal-rysakov" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Николай Рысаков</h2>
+        <p> - Роль: Бросил первую бомбу, но она лишь ранила охрану.  </p>
+        <p> - Место: Находился на набережной Екатерининского канала.  </p>
+        <p> - Действия: Бросил снаряд в царскую карету,
+             но Александр II не пострадал.
+             После взрыва был схвачен казаками и городовыми. 
+        </p>
+    </div>
+</div> 
+<div id="modal-perovskaya" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Софья Перовская</h2>
+        <p> - Роль: Организатор и координатор покушения.  
+        <p> - Место: Находилась на противоположном берегу канала, подавала сигналы (платком) о приближении царя.</p> 
+        <p> - Действия: Контролировала процесс, давала знаки бомбометателям, когда нужно атаковать. </p>
+    </div>
+</div>
+<div id="modal-zhelyabov" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Андрей Желябов</h2>
+        <p> - Роль: Главный организатор покушения.  
+        <p> - Где был: Арестован за 2 дня до убийства (27 февраля), но его планы были уже приведены в действие.  </p>
+        <p> - Действия: Разработал операцию, подобрал исполнителей, но сам не участвовал непосредственно в нападении. </p>
+    </div>
+</div>
+<div id="modal-reserves" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2> Запасные метальщики</h2>
+        <p> Запасные метальщики:  
+        <p> - Тимофей Михайлов – стоял в резерве, но не бросил бомбу.  </p>
+        <p> - Иван Емельянов – также был на месте, но не участвовал в атаке. </p>
+    </div>
+</div>
+</div>
+</div> 
+</div>
+
+
+
 <script src="https://api-maps.yandex.ru/2.1/?apikey=YOUR_API_KEY&lang=ru_RU" type="text/javascript"></script>
 <script>
 ymaps.ready(function () {
@@ -48,7 +114,6 @@ ymaps.ready(function () {
         controls: ['zoomControl', 'fullscreenControl'] // Добавляем только нужные элементы управления
     });
 
-    // Добавляем метки на карту
 var placemarks = [
     {
         coords: [59.9404, 30.3139], // 1
@@ -201,5 +266,6 @@ map.events.add('click', function (e) {
  });
 });
     </script>
+    <script src="js.js"></script>
 </body>
 </html>
