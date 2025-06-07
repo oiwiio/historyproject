@@ -10,6 +10,7 @@
   --color-btn-text: #b71c1c;
   --color-link: #fff;
 }
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -27,7 +28,9 @@ body {
     background-size: 200% 200%;
     background-position: 0% 0%;
     color: var(--color-text);
+    transition: background 0.3s ease, color 0.3s ease;
 }
+
 body.blue-theme {
   --color-bg1: #f5f9fc;
   --color-bg2: #e1edf7;
@@ -35,7 +38,7 @@ body.blue-theme {
   --color-bg4: #7ba4d4;
   --color-bg5: #4a7ab8;
   --color-text: #000;
-  --color-header: #8bb2d6;
+  --color-header: rgba(139, 178, 214, 0.95);
   --color-btn-bg: #fff;
   --color-btn-text: #000;
   --color-link: #000;
@@ -235,19 +238,6 @@ header {
     width: 100%;
     border-bottom: 3px solid rgb(255, 255, 255);
     box-sizing: border-box;
-}
-
-.bottom-section {
-    height: 20%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.45);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
 }
 
 #map {
