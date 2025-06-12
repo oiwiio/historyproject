@@ -32,8 +32,282 @@
     <div class="center-bottom">
         <div id="map" style="width: 100%; height: 100%;"></div>
     </div>
-       <div class="info-section">  <!--  scale  -->
-            <input type="range" class="range" min="0" max="150" value="0" step="10" />
+       <div class="info-section">  <!--  #fixme  -->
+    
+        <div class="slider-container">
+            <input type="range" id="markerSlider" min="0" max="14" step="1" value="0">
+            <div class="slider-marks">
+                <span data-value="1"></span>
+                <span data-value="2"></span>
+                <span data-value="3"></span>
+                <span data-value="4"></span>
+                <span data-value="5"></span>
+                <span data-value="6"></span>
+                <span data-value="7"></span>
+                <span data-value="8"></span>
+                <span data-value="9"></span>
+                <span data-value="10"></span>
+                <span data-value="11"></span>
+                <span data-value="12"></span>
+                <span data-value="13"></span>
+                <span data-value="14"></span>
+                <span data-value="15"></span>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button id="prevBtn">← Назад</button>
+            <button id="nextBtn">Вперед →</button>
+            <button id="autoPlayBtn">Автопрокрутка</button>
+        </div>
+        
+        <div id="map"></div>
+        
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=ВАШ_API_КЛЮЧ&lang=ru_RU" type="text/javascript"></script>
+        <script>
+            ymaps.ready(init);
+    
+            function init() {
+                // Иниц. карты
+                const map = new ymaps.Map('map', {
+                    center: [59.9375, 30.3086],
+                    zoom: 14,
+                    controls: ['zoomControl', 'fullscreenControl']
+                });
+    
+                // Массив меток
+                const placemarks = [
+                    {
+                        coords: [59.9404, 30.3139], // 1
+                        properties: {
+                            hintContent: '1. Зимний дворец / Дворцовая площадь',
+                            balloonContent: 'Тут всё началось, отсюда начал свой путь царя'
+                        }
+                    },
+                    {
+                        coords: [59.9398, 30.3188], // 2
+                        properties: {
+                            hintContent: '2. Место покушения Александра Соловьёва',
+                            balloonContent: 'Террорист-одиночка выстрелил в царя, и промахнулся, лишь одна пуля слегка надорвала шинель'
+                        }
+                    },
+                    {
+                        coords: [59.9304, 30.3191], // 3
+                        properties: {
+                            hintContent: '3. План взрыва Каменного моста',
+                            balloonContent: 'Стрелять в царя было невозможно, он не рисковал выходить на улицу. Под Каменный мост были опущены особые подушки,наполненные динамитом, Баранников и Желябов погрузили их под воду, чтобы при проезде царя подорвать мост'
+                        }
+                    },
+                    {
+                        coords: [59.9342, 30.3382], // 4
+                        properties: {
+                            hintContent: '4. Сырная лавка на Малой Садовой',
+                            balloonContent: 'Место 2 мины. Было выбрано более удобное место в связи частыми визитами в Михайловский манеж, арендовано помещение под сырную лавку, был вырот подкоп под улицу где была заложена мина в ночь на 1 марта 1881г.'
+                        }
+                    },
+                    {
+                        coords: [59.9342, 30.3352], // 5
+                        properties: {
+                            hintContent: '5. Невский проспект',
+                            balloonContent: 'Император должен был проехать к манежу через Невский проспект. Об этом утром 1 марта рассказывала товарищам Софья Перовская'
+                        }
+                    },
+                    { 
+                        coords: [59.9401, 30.3194], // 6
+                        properties: { 
+                            hintContent: '6. Певченский мост', 
+                            balloonContent: 'Садясь в карету, приказал лейб-кучеру Сергееву ехать через Певческий мост, а не по Невскому проспекту,что порушило все планы террористов'
+                        } 
+                    }, 
+                    { 
+                        coords: [59.9416, 30.3289], // 7 
+                        properties: { 
+                            hintContent: '7. Театральный мост', 
+                            balloonContent: 'Маршут через Певченский мост означал, что кучер должен будет свернуть к Театральному мосту' 
+                        } 
+                    }, 
+                    { 
+                        coords: [59.9371, 30.3273], // 8
+                        properties: { 
+                            hintContent: '8. Поворт на большую Итальянскую улицу', 
+                            balloonContent: 'Выезжать на Невский пр. на этом маршруте не имело смысла.Проехав мимо будущего места покушения,карета императора повернула на Большую Итальянскую улицу' 
+                        } 
+                    }, 
+                    { 
+                        coords: [59.9359, 30.3408],// 9
+                        properties: { 
+                            hintContent: '9. Михайловский манеж', 
+                            balloonContent: 'Манежная площадь,где в здании площади проходил развод войск. Михаил Фроленко ждал царя в сырной лавке, Якимова вышла узнать в чем дело,вернулась,поехали на канал. Лавка стала не нужна, Фроленко ушел' 
+                        } 
+                    }, 
+                    { 
+                        coords: [59.9371, 30.3315],// 10
+                        properties: {
+                            hintContent: '10. Обратный путь. Михайловский сквер',
+                            balloonContent: 'Развод войск кончился, Александр II сел в карету и "изволил отправится по Большой Итальянской улице,через Михайловскую площадь во дворец Екатерины Михайловны'
+                        }
+                    }, 
+                    { 
+                        coords: [59.9385, 30.3323], // 11
+                        properties: { 
+                            hintContent: '11. Михайловский дворец', 
+                            balloonContent: 'Сегодня там Русский музей,в 1881г тут жила Екатерина Михайловна,двоюродная сестра царя. После смерти императора, Екатерина откроет тут столовую для бедных.' 
+                        } 
+                    }, 
+                    { 
+                        coords: [59.9367, 30.3314], // 12
+                        properties: { 
+                            hintContent: '12. Перегрупировка', 
+                            balloonContent: 'Частые визиты императора в Михайловский дворец дали возможность террористам перегрупироваться. Софья Перовская рассказывала что выслеживала, куда направился царь,увидев что царь отправился в дворец, она подала знак,означавший что люди со снарядами должны направится на Екатериненский канал как было оговорено заранее' 
+                        } 
+                    }, 
+                    { 
+                        coords: [59.9383, 30.3279], // 13
+                        properties: { 
+                            hintContent: '13. Домой обратной дорогой', 
+                            balloonContent: 'царь,после получасового визита у сестры, приказал кучеру ехать обратно той же дорогой, через Екатериненский канал, проехав по Инженерной улице. По словам Николая Рысакова который был "бомбистом" и стоял ближе всех к карете :"он уже пол часа ходил вдоль канала"' 
+                        } 
+                    }, 
+                    { 
+                        coords: [59.9401, 30.3283], // 14
+                        properties: { 
+                            hintContent: '14. Место убийства', 
+                            balloonContent: 'Примерно 14:15. Николай рысаков бросил бомбу под карету царя, повредилась задняя часть, царь не стал покидать место теракта, вышел из кареты,осмотрел место взрыва и даже на Рысакова. Вторая бомба была брошена Игнатием Гриневицким. Царь смертельно ранен,Игнат погиб.' 
+                        } 
+                    }, 
+                    { 
+                        coords: [59.9401, 30.3142], // 15 
+                        properties: { 
+                            hintContent: '15. и снова зимний дворец..', 
+                            balloonContent: 'Михаил Фроленко писал, что Александр II умер по дороге до Зимнего дворца. Именно туда повезли императора по его же просьба. Императорский штандарт был спущен в 15:35 - это стало официальным временем кончины Александра II. Всё кончено, народники осуществили свой план,царь пал..' 
+                        } 
+                    }  
+                ];
+    
+                // Массив для хранения объектов меток
+                const markers = [];
+                
+                // Создаем метки и добавляем их на карту
+                placemarks.forEach((placemark, index) => {
+                    const marker = new ymaps.Placemark(placemark.coords, {
+                        balloonContentHeader: placemark.properties.hintContent,
+                        balloonContentBody: placemark.properties.balloonContent,
+                        hintContent: placemark.properties.hintContent
+                    }, {
+                        preset: 'islands#circleIcon',
+                        iconColor: index === 0 ? '#ff0000' : '#1e98ff',
+                        balloonCloseButton: true
+                    });
+                    
+                    // Добавляем метку на карту
+                    map.geoObjects.add(marker);
+                    markers.push(marker);
+                    
+                    // Обработчик клика по метке
+                    marker.events.add('click', function() {
+                        // Обновляем ползунок при клике на метку
+                        document.getElementById('markerSlider').value = index;
+                        // Центрируем карту на метке
+                        map.panTo(placemark.coords, {flying: true});
+                        // Выделяем текущую метку
+                        updateActiveMarker(index);
+                        // Обновляем текст текущей позиции
+                        updatePositionText(index);
+                    });
+                });
+                
+                // Получаем элементы управления
+                const slider = document.getElementById('markerSlider');
+                const prevBtn = document.getElementById('prevBtn');
+                const nextBtn = document.getElementById('nextBtn');
+                const autoPlayBtn = document.getElementById('autoPlayBtn');
+                
+                // Обработчик изменения ползунка
+                slider.addEventListener('input', function() {
+                    const markerIndex = parseInt(this.value);
+                    const coord = placemarks[markerIndex].coords;
+                    
+                    // Центрируем карту на выбранной метке с анимацией
+                    map.panTo(coord, {flying: true});
+                    
+                    // Выделяем текущую метку
+                    updateActiveMarker(markerIndex);
+                    
+                    // Обновляем текст текущей позиции
+                    updatePositionText(markerIndex);
+                });
+                
+                // Обработчики кнопок навигации
+                prevBtn.addEventListener('click', function() {
+                    const currentValue = parseInt(slider.value);
+                    if (currentValue > 0) {
+                        slider.value = currentValue - 1;
+                        const event = new Event('input');
+                        slider.dispatchEvent(event);
+                    }
+                });
+                
+                nextBtn.addEventListener('click', function() {
+                    const currentValue = parseInt(slider.value);
+                    if (currentValue < placemarks.length - 1) {
+                        slider.value = currentValue + 1;
+                        const event = new Event('input');
+                        slider.dispatchEvent(event);
+                    }
+                });
+                
+                // Автопрокрутка
+                let autoPlayInterval;
+                autoPlayBtn.addEventListener('click', function() {
+                    if (autoPlayInterval) {
+                        clearInterval(autoPlayInterval);
+                        autoPlayInterval = null;
+                        this.textContent = 'Автопрокрутка';
+                    } else {
+                        let current = parseInt(slider.value);
+                        autoPlayInterval = setInterval(() => {
+                            current = (current + 1) % placemarks.length;
+                            slider.value = current;
+                            const event = new Event('input');
+                            slider.dispatchEvent(event);
+                        }, 3000);
+                        this.textContent = 'Остановить';
+                    }
+                });
+                
+                // Функция для обновления активной метки
+                function updateActiveMarker(activeIndex) {
+                    markers.forEach((marker, index) => {
+                        // Меняем цвет иконки в зависимости от активности
+                        marker.options.set('iconColor', index === activeIndex ? '#ff0000' : '#1e98ff');
+                        
+                        // Если нужно, открываем балун у активной метки
+                        if (index === activeIndex) {
+                            marker.balloon.open();
+                        } else {
+                            marker.balloon.close();
+                        }
+                    });
+                }
+                
+                // Функция для обновления текста текущей позиции
+                function updatePositionText(index) {
+                    const positionText = document.getElementById('currentPosition');
+                    positionText.textContent = placemarks[index].properties.hintContent;
+                }
+                
+                // Инициализация - выделяем первую метку
+                updateActiveMarker(0);
+            }
+        </script>
+
+
+
+
+
+
+
+        
         </div>
       <div class="bottom-section">
           <p>ФИО участников заговора: </p>
@@ -105,167 +379,6 @@
 
 
 
-<script src="https://api-maps.yandex.ru/2.1/?apikey=YOUR_API_KEY&lang=ru_RU" type="text/javascript"></script>
-<script>
-ymaps.ready(function () {
-    var map = new ymaps.Map('map', {
-        center: [59.9375, 30.3086], // Координаты центра Санкт-Петербурга
-        zoom: 11, // Увеличенный зум для лучшего обзора города
-        controls: ['zoomControl', 'fullscreenControl'] // Добавляем только нужные элементы управления
-    });
-
-var placemarks = [
-    {
-        coords: [59.9404, 30.3139], // 1
-        properties: {
-            hintContent: '1. Зимний дворец / Дворцовая площадь',
-            balloonContent: 'Тут всё началось, отсюда начал свой путь царя '
-        }
-    },
-{
-    coords: [59.9398, 30.3188], // 2
-    properties: {
-        hintContent: '2. Место покушения Александра Соловьёва',
-        balloonContent: 'Террорист-одиночка выстрелил в царя, и промахнулся, лишь одна пуля слегка надорвала шинель '
-    }
-},
-{
-    coords: [59.9304, 30.3191], // 3
-    properties: {
-        hintContent: '3. План взрыва Каменного моста ',
-        balloonContent: 'Стрелять в царя было невозможно, он не рисковал выходить на улицу. Под Каменный мост были опущены особые подушки,наполненные динамитом, Баранников и Желябов погрузили их под воду, чтобы при проезде царя подорвать мост'
-    }
-},
-{
-    coords: [59.9342, 30.3382], // 4
-    properties: {
-        hintContent: '4. Сырная лавка на Малой Садовой',
-        balloonContent: 'Место 2 мины. Было выбрано более удобное место в связи частыми визитами в Михайловский манеж, арендовано помещение под сырную лавку, был вырот подкоп под улицу где была заложена мина в ночь на 1 марта 1881г.'
-    }
-},
- {
-     coords: [59.9342, 30.3352], // 5
-     properties: {
-         hintContent: '5. Невский проспект',
-         balloonContent: 'Император должен был проехать к манежу через Невский проспект. Об этом утром 1 марта рассказывала товарищам Софья Перовская'
-     }
-},
- { coords: [59.9401, 30.3194], // 6
-    properties: { 
-        hintContent: '6. Певченский мост', 
-        balloonContent: 'Садясь в карету, приказал лейб-кучеру Сергееву ехать через Певческий мост, а не по Невскому проспекту,что порушило все планы террористов '
-             
-    } 
-}, 
- { coords: [59.9416, 30.3289], // 7 
-    properties: { 
-        hintContent: '7. Театральный мост', 
-        balloonContent: 'Маршут через Певченский мост означал, что кучер должен будет свернуть к Театральному мосту ' 
-    } 
-}, 
- { coords: [59.9371, 30.3273], // 8
-    properties: { 
-        hintContent: '8. Поворт на большую Итальянскую улицу', 
-        balloonContent: 'Выезжать на Невский пр. на этом маршруте не имело смысла.Проехав мимо будущего места покушения,карета императора повернула на Большую Итальянскую улицу' 
-    } 
-}, 
- { coords: [59.9359, 30.3408],// 9
-    properties: { 
-        hintContent: '9. Михайловский манеж ', 
-        balloonContent: 'Манежная площадь,где в здании площади проходил развод войск. Михаил Фроленко ждал царя в сырной лавке, Якимова вышла узнать в чем дело,вернулась,поехали на канал. Лавка стала не нужна, Фроленко ушел' 
-
- } 
-}, 
- { coords: [59.9371, 30.3315],// 10
-     properties: {
-        hintContent: '10. Обратный путь. Михайловский сквер',
-        balloonContent: 'Развод войск кончился, Александр II сел в карету и "изволил отправится по Большой Итальянской улице,через Михайловскую площадь во дворец Екатерины Михайловны'
-
-  }
- }, 
- { coords: [59.9385, 30.3323], // 11
-    properties: { 
-    hintContent: '11. Михайловский дворец', 
- balloonContent: 'Сегодня там Русский музей,в 1881г тут жила Екатерина Михайловна,двоюродная сестра царя. После смерти императора, Екатерина откроет тут столовую для бедных. ' 
-
- } 
-}, 
- { coords: [59.9367, 30.3314], // 12
-    properties: { 
-        hintContent: '12. Перегрупировка', 
-        balloonContent: 'Частые визиты императора в Михайловский дворец дали возможность террористам перегрупироваться. Софья Перовская рассказывала что выслеживала, куда направился царь,увидев что царь отправился в дворец, она подала знак,означавший что люди со снарядами должны направится на Екатериненский канал как было оговорено заранее' 
-
- } 
-}, 
- { coords: [59.9383, 30.3279], // 13
-    properties: { 
-        hintContent: '13. Домой обратной дорогой', 
-        balloonContent: 'царь,после получасового визита у сестры, приказал кучеру ехать обратно той же дорогой, через Екатериненский канал, проехав по Инженерной улице. По словам Николая Рысакова который был "бомбистом" и стоял ближе всех к карете :"он уже пол часа ходил вдоль канала"' 
-
- } 
-}, 
- { coords: [59.9401, 30.3283], // 14
-    properties: { 
-        hintContent: '14. Место убийства', 
-        balloonContent: 'Примерно 14:15. Николай рысаков бросил бомбу под карету царя, повредилась задняя часть, царь не стал покидать место теракта, вышел из кареты,осмотрел место взрыва и даже на Рысакова. Вторая бомба была брошена Игнатием Гриневицким. Царь смертельно ранен,Игнат погиб.' 
-
- } 
-}, 
- { coords: [59.9401, 30.3142], // 15 
-    properties: { 
-        hintContent: '15. и снова зимний дворец..', 
-        balloonContent: 'Михаил Фроленко писал, что Александр II умер по дороге до Зимнего дворца. Именно туда повезли императора по его же просьба. Императорский штандарт был спущен в 15:35 - это стало официальным временем кончины Александра II. Всё кончено, народники осуществили свой план,царь пал.. ' 
-
- } 
-}  
-    ];
-
- placemarks.forEach(function (obj) {
-     var placemark = new ymaps.Placemark(obj.coords, obj.properties);
-     map.geoObjects.add(placemark);
- });
-
-// добавляем обработчик клика на карту для добавления новых меток
-map.events.add('click', function (e) {
-    if (!map.balloon.isOpen()) {
-        var coords = e.get('coords');
-        map.balloon.open(coords, {
-            contentHeader:'Новая метка',
-            contentBody:'<p>Координаты: ' + [
-                coords[0].toPrecision(6),
-                coords[1].toPrecision(6)
-            ].join(', ') + '</p>',
-            contentFooter:''
-        });
-    }
-    else {
-        map.balloon.close();
-    }
-});
-
- // Добавляем возможность добавления метки при клике на балун
- map.events.add('balloonopen', function (e) {
-     var balloon = e.get('balloon');
-     var coords = balloon.getPosition();
-
-     var addButton = '<button id="addPlacemark">Добавить метку</button>';
-     balloon.setContent(balloon.getContent() + addButton);
-     document.getElementById('addPlacemark').addEventListener('click', function(){
-         var myPlacemark = new ymaps.Placemark(coords, {
-             // Здесь можно добавить опции метки, например, иконку или контент
-             // iconContent: 'Метка',
-             // balloonContent: 'Описание метки'
-         }, {
-             // Опции для отображения метки
-             // preset: 'islands#icon',
-             // iconColor: '#0095b6'
-         });
-         map.geoObjects.add(myPlacemark);
-         map.balloon.close();
-     });
- });
-});
-    </script>
     <script src="js.js"></script>
 </body>
 </html>
