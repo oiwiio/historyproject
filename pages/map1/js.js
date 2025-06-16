@@ -1,5 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
     
+    document.querySelectorAll('.info-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const modalId = this.getAttribute('data-target');
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.style.display = 'block';
+        }
+    });
+});
     const themeSwitcher = document.getElementById('themeSwitcher');
     if (themeSwitcher) {
         themeSwitcher.addEventListener('click', () => {
