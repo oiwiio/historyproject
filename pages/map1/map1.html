@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Народники, карта террористической деятельности</title>
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="icon" href="../img/logo.png" type="image/x-icon">
-    <link rel="icon" href="../img/logo.png" type="image/png" sizes="32x32">
-    <link rel="icon" href="../img/logo.png" type="image/png" sizes="16x16">
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="icon" href="../img/logo.png" type="image/x-icon">
+        <link rel="icon" href="../img/logo.png" type="image/png" sizes="32x32">
+        <link rel="icon" href="../img/logo.png" type="image/png" sizes="16x16">
 </head>
 <body>
 <header>
@@ -18,361 +18,348 @@
             <span class="logo-text">Последний маршрут Александра II </span>
         </div>
     </div>
-<div class="header-buttons">
-    <a href="../createrpages/creater.html" class="header-btn">Команда</a>
-    <a href="../../main/main.html" class="header-btn">На главную</a>
+        <div class="header-buttons">
+            <a href="../createrpages/creater.html" class="header-btn">Команда</a>
+        <a href="../../main/main.html" class="header-btn">На главную</a>
     <button class="theme-switcher" id="themeSwitcher" title="Сменить тему"></button>
 </div>
 </header>
     <div class="center-block">
         <div class="left-section">
            <p><h2>Подробная информация</h2></p>
-           <ul>
-    <li><button class="info-btn" data-target="modal-info-1">1. Зимний дворец</button></li>
-    <li><button class="info-btn" data-target="modal-info-2">2. Покушение Соловьёва</button></li>
-    <li><button class="info-btn" data-target="modal-info-3">3. Каменный мост</button></li>
-    <li><button class="info-btn" data-target="modal-info-4">4. Сырная лавка</button></li>
-    <li><button class="info-btn" data-target="modal-info-5">5. Невский проспект</button></li>
-    <li><button class="info-btn" data-target="modal-info-6">6. Певченский мост</button></li>
-    <li><button class="info-btn" data-target="modal-info-7">7. Театральный мост</button></li>
-    <li><button class="info-btn" data-target="modal-info-8">8. Итальянская улица</button></li>
-    <li><button class="info-btn" data-target="modal-info-9">9. Михайловский манеж</button></li>
-    <li><button class="info-btn" data-target="modal-info-10">10. Михайловский сквер</button></li>
-    <li><button class="info-btn" data-target="modal-info-11">11. Михайловский дворец</button></li>
-    <li><button class="info-btn" data-target="modal-info-12">12. Перегруппировка</button></li>
-    <li><button class="info-btn" data-target="modal-info-13">13. Обратный путь</button></li>
-    <li><button class="info-btn" data-target="modal-info-14">14. Место убийства</button></li>
-    <li><button class="info-btn" data-target="modal-info-15">15. Зимний дворец</button></li>
+            <ul>
+                <li><button class="info-btn" data-target="modal-info-1">1. Зимний дворец</button></li>
+                <li><button class="info-btn" data-target="modal-info-2">2. Покушение Соловьёва</button></li>
+                <li><button class="info-btn" data-target="modal-info-3">3. Каменный мост</button></li>
+                <li><button class="info-btn" data-target="modal-info-4">4. Сырная лавка</button></li>
+                <li><button class="info-btn" data-target="modal-info-5">5. Невский проспект</button></li>
+                <li><button class="info-btn" data-target="modal-info-6">6. Певченский мост</button></li>
+                <li><button class="info-btn" data-target="modal-info-7">7. Театральный мост</button></li>
+                <li><button class="info-btn" data-target="modal-info-8">8. Итальянская улица</button></li>
+                <li><button class="info-btn" data-target="modal-info-9">9. Михайловский манеж</button></li>
+                <li><button class="info-btn" data-target="modal-info-10">10. Михайловский сквер</button></li>
+                <li><button class="info-btn" data-target="modal-info-11">11. Михайловский дворец</button></li>
+                <li><button class="info-btn" data-target="modal-info-12">12. Перегруппировка</button></li>
+                <li><button class="info-btn" data-target="modal-info-13">13. Обратный путь</button></li>
+                <li><button class="info-btn" data-target="modal-info-14">14. Место убийства</button></li>
+                <li><button class="info-btn" data-target="modal-info-15">15. Зимний дворец</button></li>
             </ul>
         </div>
-
     <div class="center-bottom">
         <div id="map" style="width: 100%; height: 100%;"></div>
     </div>
-       <div class="info-section">  
-        
-        <div class="slider-container">
-            <input type="range" id="markerSlider" min="0" max="14" step="1" value="0">
-            <div class="slider-marks">
-                <span data-value="1"></span>
-                <span data-value="2"></span>
-                <span data-value="3"></span>
-                <span data-value="4"></span>
-                <span data-value="5"></span>
-                <span data-value="6"></span>
-                <span data-value="7"></span>
-                <span data-value="8"></span>
-                <span data-value="9"></span>
-                <span data-value="10"></span>
-                <span data-value="11"></span>
-                <span data-value="12"></span>
-                <span data-value="13"></span>
-                <span data-value="14"></span>
-                <span data-value="15"></span>
-            </div>
-        </div>
-        
-        <div class="controls">
-            <button id="prevBtn">← Назад</button>
+        <div class="info-section">  
+            <div class="slider-container">
+                <input type="range" id="markerSlider" min="0" max="14" step="1" value="0">
+                    <div class="slider-marks">
+                    <span data-value="1"></span>
+                    <span data-value="2"></span>
+                    <span data-value="3"></span>
+                    <span data-value="4"></span>
+                    <span data-value="5"></span>
+                    <span data-value="6"></span>
+                    <span data-value="7"></span>
+                    <span data-value="8"></span>
+                    <span data-value="9"></span>
+                    <span data-value="10"></span>
+                    <span data-value="11"></span>
+                    <span data-value="12"></span>
+                    <span data-value="13"></span>
+                    <span data-value="14"></span>
+                    <span data-value="15"></span>
+    </div>
+</div>    
+    <div class="controls">
+        <button id="prevBtn">← Назад</button>
             <button id="nextBtn">Вперед →</button>
-            <button id="autoPlayBtn">Автопрокрутка</button>
-        </div>
-        
+        <button id="autoPlayBtn">Автопрокрутка</button>
+    </div>
         <div id="map"></div>
-        
         <script src="https://api-maps.yandex.ru/2.1/?apikey=ВАШ_API_КЛЮЧ&lang=ru_RU" type="text/javascript"></script>
         <script>
-            ymaps.ready(init);
-    
-            function init() {
+         ymaps.ready(init);
+
+         function init() {
             
-                const map = new ymaps.Map('map', {
-                    center: [59.9375, 30.3086],
-                    zoom: 14,
-                    controls: ['zoomControl', 'fullscreenControl']
-                });
+        const map = new ymaps.Map('map', {
+            center: [59.9375, 30.3086],
+            zoom: 14,
+            controls: ['zoomControl', 'fullscreenControl']
+        });
     
-                
-                const placemarks = [
-                    {
-                        coords: [59.9404, 30.3139], // 1
-                        properties: {
-                            hintContent: '1. Зимний дворец / Дворцовая площадь',
-                            balloonContent: 'Тут всё началось, отсюда начал свой путь царя'
-                        }
-                    },
-                    {
-                        coords: [59.9398, 30.3188], // 2
-                        properties: {
-                            hintContent: '2. Место покушения Александра Соловьёва',
-                            balloonContent: 'Террорист-одиночка выстрелил в царя, и промахнулся, лишь одна пуля слегка надорвала шинель'
-                        }
-                    },
-                    {
-                        coords: [59.9304, 30.3191], // 3
-                        properties: {
-                            hintContent: '3. План взрыва Каменного моста',
-                            balloonContent: 'Стрелять в царя было невозможно, он не рисковал выходить на улицу. Под Каменный мост были опущены особые подушки,наполненные динамитом, Баранников и Желябов погрузили их под воду, чтобы при проезде царя подорвать мост'
-                        }
-                    },
-                    {
-                        coords: [59.9342, 30.3382], // 4
-                        properties: {
-                            hintContent: '4. Сырная лавка на Малой Садовой',
-                            balloonContent: 'Место 2 мины. Было выбрано более удобное место в связи частыми визитами в Михайловский манеж, арендовано помещение под сырную лавку, был вырот подкоп под улицу где была заложена мина в ночь на 1 марта 1881г.'
-                        }
-                    },
-                    {
-                        coords: [59.9342, 30.3352], // 5
-                        properties: {
-                            hintContent: '5. Невский проспект',
-                            balloonContent: 'Император должен был проехать к манежу через Невский проспект. Об этом утром 1 марта рассказывала товарищам Софья Перовская'
-                        }
-                    },
-                    { 
-                        coords: [59.9401, 30.3194], // 6
-                        properties: { 
-                            hintContent: '6. Певченский мост', 
-                            balloonContent: 'Садясь в карету, приказал лейб-кучеру Сергееву ехать через Певческий мост, а не по Невскому проспекту,что порушило все планы террористов'
-                        } 
-                    }, 
-                    { 
-                        coords: [59.9416, 30.3289], // 7 
-                        properties: { 
-                            hintContent: '7. Театральный мост', 
-                            balloonContent: 'Маршут через Певченский мост означал, что кучер должен будет свернуть к Театральному мосту' 
-                        } 
-                    }, 
-                    { 
-                        coords: [59.9371, 30.3273], // 8
-                        properties: { 
-                            hintContent: '8. Поворт на большую Итальянскую улицу', 
-                            balloonContent: 'Выезжать на Невский пр. на этом маршруте не имело смысла.Проехав мимо будущего места покушения,карета императора повернула на Большую Итальянскую улицу' 
-                        } 
-                    }, 
-                    { 
-                        coords: [59.9359, 30.3408],// 9
-                        properties: { 
-                            hintContent: '9. Михайловский манеж', 
-                            balloonContent: 'Манежная площадь,где в здании площади проходил развод войск. Михаил Фроленко ждал царя в сырной лавке, Якимова вышла узнать в чем дело,вернулась,поехали на канал. Лавка стала не нужна, Фроленко ушел' 
-                        } 
-                    }, 
-                    { 
-                        coords: [59.9371, 30.3315],// 10
-                        properties: {
-                            hintContent: '10. Обратный путь. Михайловский сквер',
-                            balloonContent: 'Развод войск кончился, Александр II сел в карету и "изволил отправится по Большой Итальянской улице,через Михайловскую площадь во дворец Екатерины Михайловны'
-                        }
-                    }, 
-                    { 
-                        coords: [59.9385, 30.3323], // 11
-                        properties: { 
-                            hintContent: '11. Михайловский дворец', 
-                            balloonContent: 'Сегодня там Русский музей,в 1881г тут жила Екатерина Михайловна,двоюродная сестра царя. После смерти императора, Екатерина откроет тут столовую для бедных.' 
-                        } 
-                    }, 
-                    { 
-                        coords: [59.9367, 30.3314], // 12
-                        properties: { 
-                            hintContent: '12. Перегрупировка', 
-                            balloonContent: 'Частые визиты императора в Михайловский дворец дали возможность террористам перегрупироваться. Софья Перовская рассказывала что выслеживала, куда направился царь,увидев что царь отправился в дворец, она подала знак,означавший что люди со снарядами должны направится на Екатериненский канал как было оговорено заранее' 
-                        } 
-                    }, 
-                    { 
-                        coords: [59.9383, 30.3279], // 13
-                        properties: { 
-                            hintContent: '13. Домой обратной дорогой', 
-                            balloonContent: 'царь,после получасового визита у сестры, приказал кучеру ехать обратно той же дорогой, через Екатериненский канал, проехав по Инженерной улице. По словам Николая Рысакова который был "бомбистом" и стоял ближе всех к карете :"он уже пол часа ходил вдоль канала"' 
-                        } 
-                    }, 
-                    { 
-                        coords: [59.9401, 30.3283], // 14
-                        properties: { 
-                            hintContent: '14. Место убийства', 
-                            balloonContent: 'Примерно 14:15. Николай рысаков бросил бомбу под карету царя, повредилась задняя часть, царь не стал покидать место теракта, вышел из кареты,осмотрел место взрыва и даже на Рысакова. Вторая бомба была брошена Игнатием Гриневицким. Царь смертельно ранен,Игнат погиб.' 
-                        } 
-                    }, 
-                    { 
-                        coords: [59.9401, 30.3142], // 15 
-                        properties: { 
-                            hintContent: '15. и снова зимний дворец..', 
-                            balloonContent: 'Михаил Фроленко писал, что Александр II умер по дороге до Зимнего дворца. Именно туда повезли императора по его же просьба. Императорский штандарт был спущен в 15:35 - это стало официальным временем кончины Александра II. Всё кончено, народники осуществили свой план,царь пал..' 
-                        } 
-                    }  
-                ];
+        const placemarks = [
+            {
+                coords: [59.9404, 30.3139], // 1
+                properties: {
+                    hintContent: '1. Зимний дворец / Дворцовая площадь',
+                    balloonContent: 'Тут всё началось, отсюда начал свой путь царя'
+                }
+            },
+            {
+                coords: [59.9398, 30.3188], // 2
+                properties: {
+                    hintContent: '2. Место покушения Александра Соловьёва',
+                    balloonContent: 'Террорист-одиночка выстрелил в царя, и промахнулся, лишь одна пуля слегка надорвала шинель'
+                }
+            },
+            {
+                coords: [59.9304, 30.3191], // 3
+                properties: {
+                    hintContent: '3. План взрыва Каменного моста',
+                    balloonContent: 'Стрелять в царя было невозможно, он не рисковал выходить на улицу. Под Каменный мост были опущены особые подушки,наполненные динамитом, Баранников и Желябов погрузили их под воду, чтобы при проезде царя подорвать мост'
+                }
+            },
+            {
+                coords: [59.9342, 30.3382], // 4
+                properties: {
+                    hintContent: '4. Сырная лавка на Малой Садовой',
+                    balloonContent: 'Место 2 мины. Было выбрано более удобное место в связи частыми визитами в Михайловский манеж, арендовано помещение под сырную лавку, был вырот подкоп под улицу где была заложена мина в ночь на 1 марта 1881г.'
+                }
+            },
+            {
+                coords: [59.9342, 30.3352], // 5
+                properties: {
+                    hintContent: '5. Невский проспект',
+                    balloonContent: 'Император должен был проехать к манежу через Невский проспект. Об этом утром 1 марта рассказывала товарищам Софья Перовская'
+                }
+            },
+            { 
+                coords: [59.9401, 30.3194], // 6
+                properties: { 
+                    hintContent: '6. Певченский мост', 
+                    balloonContent: 'Садясь в карету, приказал лейб-кучеру Сергееву ехать через Певческий мост, а не по Невскому проспекту,что порушило все планы террористов'
+                } 
+            }, 
+            { 
+                coords: [59.9416, 30.3289], // 7 
+                properties: { 
+                    hintContent: '7. Театральный мост', 
+                    balloonContent: 'Маршут через Певченский мост означал, что кучер должен будет свернуть к Театральному мосту' 
+                } 
+            }, 
+            { 
+                coords: [59.9371, 30.3273], // 8
+                properties: { 
+                    hintContent: '8. Поворт на большую Итальянскую улицу', 
+                    balloonContent: 'Выезжать на Невский пр. на этом маршруте не имело смысла.Проехав мимо будущего места покушения,карета императора повернула на Большую Итальянскую улицу' 
+                } 
+            }, 
+            { 
+                coords: [59.9359, 30.3408],// 9
+                properties: { 
+                    hintContent: '9. Михайловский манеж', 
+                    balloonContent: 'Манежная площадь,где в здании площади проходил развод войск. Михаил Фроленко ждал царя в сырной лавке, Якимова вышла узнать в чем дело,вернулась,поехали на канал. Лавка стала не нужна, Фроленко ушел' 
+                } 
+            }, 
+            { 
+                coords: [59.9371, 30.3315],// 10
+                properties: {
+                    hintContent: '10. Обратный путь. Михайловский сквер',
+                    balloonContent: 'Развод войск кончился, Александр II сел в карету и "изволил отправится по Большой Итальянской улице,через Михайловскую площадь во дворец Екатерины Михайловны'
+                }
+            }, 
+            { 
+                coords: [59.9385, 30.3323], // 11
+                properties: { 
+                    hintContent: '11. Михайловский дворец', 
+                    balloonContent: 'Сегодня там Русский музей,в 1881г тут жила Екатерина Михайловна,двоюродная сестра царя. После смерти императора, Екатерина откроет тут столовую для бедных.' 
+                } 
+            }, 
+            { 
+                coords: [59.9367, 30.3314], // 12
+                properties: { 
+                    hintContent: '12. Перегрупировка', 
+                    balloonContent: 'Частые визиты императора в Михайловский дворец дали возможность террористам перегрупироваться. Софья Перовская рассказывала что выслеживала, куда направился царь,увидев что царь отправился в дворец, она подала знак,означавший что люди со снарядами должны направится на Екатериненский канал как было оговорено заранее' 
+                } 
+            }, 
+            { 
+                coords: [59.9383, 30.3279], // 13
+                properties: { 
+                    hintContent: '13. Домой обратной дорогой', 
+                    balloonContent: 'царь,после получасового визита у сестры, приказал кучеру ехать обратно той же дорогой, через Екатериненский канал, проехав по Инженерной улице. По словам Николая Рысакова который был "бомбистом" и стоял ближе всех к карете :"он уже пол часа ходил вдоль канала"' 
+                } 
+            }, 
+            { 
+                coords: [59.9401, 30.3283], // 14
+                properties: { 
+                    hintContent: '14. Место убийства', 
+                    balloonContent: 'Примерно 14:15. Николай рысаков бросил бомбу под карету царя, повредилась задняя часть, царь не стал покидать место теракта, вышел из кареты,осмотрел место взрыва и даже на Рысакова. Вторая бомба была брошена Игнатием Гриневицким. Царь смертельно ранен,Игнат погиб.' 
+                } 
+            }, 
+            { 
+                coords: [59.9401, 30.3142], // 15 
+                properties: { 
+                    hintContent: '15. и снова зимний дворец..', 
+                    balloonContent: 'Михаил Фроленко писал, что Александр II умер по дороге до Зимнего дворца. Именно туда повезли императора по его же просьба. Императорский штандарт был спущен в 15:35 - это стало официальным временем кончины Александра II. Всё кончено, народники осуществили свой план,царь пал..' 
+                } 
+            }  
+        ];
     
-               
-                const markers = [];
+        const markers = [];
+        
+        placemarks.forEach((placemark, index) => {
+            const marker = new ymaps.Placemark(placemark.coords, {
+                balloonContentHeader: placemark.properties.hintContent,
+                balloonContentBody: placemark.properties.balloonContent,
+                hintContent: placemark.properties.hintContent
+            }, {
+                preset: 'islands#circleIcon',
+                iconColor: index === 0 ? '#ff0000' : '#1e98ff',
+                balloonCloseButton: true
+            });
+            
+            map.geoObjects.add(marker);
+            markers.push(marker);
+            
+            marker.events.add('click', function() {
                 
+                document.getElementById('markerSlider').value = index;
+                map.panTo(placemark.coords, {flying: true});
+                updateActiveMarker(index);
+                updatePositionText(index);
+            });
+        });
                 
-                placemarks.forEach((placemark, index) => {
-                    const marker = new ymaps.Placemark(placemark.coords, {
-                        balloonContentHeader: placemark.properties.hintContent,
-                        balloonContentBody: placemark.properties.balloonContent,
-                        hintContent: placemark.properties.hintContent
-                    }, {
-                        preset: 'islands#circleIcon',
-                        iconColor: index === 0 ? '#ff0000' : '#1e98ff',
-                        balloonCloseButton: true
-                    });
-                    
-                    
-                    map.geoObjects.add(marker);
-                    markers.push(marker);
-                    
-                    
-                    marker.events.add('click', function() {
-                        
-                        document.getElementById('markerSlider').value = index;
-                        map.panTo(placemark.coords, {flying: true});
-                        updateActiveMarker(index);
-                        updatePositionText(index);
-                    });
-                });
+        const slider = document.getElementById('markerSlider');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const autoPlayBtn = document.getElementById('autoPlayBtn');
+        
+        slider.addEventListener('input', function() {
+            const markerIndex = parseInt(this.value);
+            const coord = placemarks[markerIndex].coords;
+            
+            map.panTo(coord, {flying: true});
+            
+            updateActiveMarker(markerIndex);
+            
+            updatePositionText(markerIndex);
+        });
                 
-                const slider = document.getElementById('markerSlider');
-                const prevBtn = document.getElementById('prevBtn');
-                const nextBtn = document.getElementById('nextBtn');
-                const autoPlayBtn = document.getElementById('autoPlayBtn');
-                
-                slider.addEventListener('input', function() {
-                    const markerIndex = parseInt(this.value);
-                    const coord = placemarks[markerIndex].coords;
-                    
-                    map.panTo(coord, {flying: true});
-                    
-                    
-                    updateActiveMarker(markerIndex);
-                    
-                    
-                    updatePositionText(markerIndex);
-                });
-                
-               
-                prevBtn.addEventListener('click', function() {
-                    const currentValue = parseInt(slider.value);
-                    if (currentValue > 0) {
-                        slider.value = currentValue - 1;
-                        const event = new Event('input');
-                        slider.dispatchEvent(event);
-                    }
-                });
-                
-                nextBtn.addEventListener('click', function() {
-                    const currentValue = parseInt(slider.value);
-                    if (currentValue < placemarks.length - 1) {
-                        slider.value = currentValue + 1;
-                        const event = new Event('input');
-                        slider.dispatchEvent(event);
-                    }
-                });
-                
-                let autoPlayInterval;
-                autoPlayBtn.addEventListener('click', function() {
-                    if (autoPlayInterval) {
-                        clearInterval(autoPlayInterval);
-                        autoPlayInterval = null;
-                        this.textContent = 'Автопрокрутка';
-                    } else {
-                        let current = parseInt(slider.value);
-                        autoPlayInterval = setInterval(() => {
-                            current = (current + 1) % placemarks.length;
-                            slider.value = current;
-                            const event = new Event('input');
-                            slider.dispatchEvent(event);
-                        }, 3000);
-                        this.textContent = 'Остановить';
-                    }
-                });
-                
-                
-                function updateActiveMarker(activeIndex) {
-                    markers.forEach((marker, index) => {
-                       
-                        marker.options.set('iconColor', index === activeIndex ? '#ff0000' : '#1e98ff');
-                        
-                        
-                        if (index === activeIndex) {
-                            marker.balloon.open();
-                        } else {
-                            marker.balloon.close();
-                        }
-                    });
-                }
-                
-               
-                function updatePositionText(index) {
-                    const positionText = document.getElementById('currentPosition');
-                    positionText.textContent = placemarks[index].properties.hintContent;
-                }
-                
-                
-                updateActiveMarker(0);
+        prevBtn.addEventListener('click', function() {
+            const currentValue = parseInt(slider.value);
+            if (currentValue > 0) {
+                slider.value = currentValue - 1;
+                const event = new Event('input');
+                slider.dispatchEvent(event);
             }
-        </script>
-        </div>
+        });
+                
+        nextBtn.addEventListener('click', function() {
+            const currentValue = parseInt(slider.value);
+            if (currentValue < placemarks.length - 1) {
+                slider.value = currentValue + 1;
+                const event = new Event('input');
+                slider.dispatchEvent(event);
+            }
+        });
+                
+        let autoPlayInterval;
+        autoPlayBtn.addEventListener('click', function() {
+            if (autoPlayInterval) {
+                clearInterval(autoPlayInterval);
+                autoPlayInterval = null;
+                this.textContent = 'Автопрокрутка';
+            } else {
+                let current = parseInt(slider.value);
+                autoPlayInterval = setInterval(() => {
+                    current = (current + 1) % placemarks.length;
+                    slider.value = current;
+                    const event = new Event('input');
+                    slider.dispatchEvent(event);
+                }, 3000);
+                this.textContent = 'Остановить';
+            }
+        });
+                
+        function updateActiveMarker(activeIndex) {
+            markers.forEach((marker, index) => {
+               
+                marker.options.set('iconColor', index === activeIndex ? '#ff0000' : '#1e98ff');
+                
+                
+                if (index === activeIndex) {
+                    marker.balloon.open();
+                } else {
+                    marker.balloon.close();
+                }
+            });
+        }
+                
+        function updatePositionText(index) {
+            const positionText = document.getElementById('currentPosition');
+            positionText.textContent = placemarks[index].properties.hintContent;
+        }
+
+        updateActiveMarker(0);
+    }
+    </script>
+    </div>
       <div class="bottom-section">
           <p>ФИО участников заговора: </p>
-          <ul class="conspirators-list">
-          <li><button class="conspirator-btn" data-target="modal-grinevitsky">Игнатий Гриневицкий (Метельский)</button></li>
-          <li><button class="conspirator-btn" data-target="modal-rysakov">Николай Рысаков</button></li>
-          <li><button class="conspirator-btn" data-target="modal-perovskaya">Софья Перовская</button></li>
-          <li><button class="conspirator-btn" data-target="modal-zhelyabov">Андрей Желябов</button></li>
-          <li><button class="conspirator-btn" data-target="modal-reserves">Запасные метальщики</button></li>
-      </ul>
-  </div>
-<div id="modal-grinevitsky" class="modal">
-    <div class="modal-content">
-        <span class="close-btn">&times;</span>
-        <h2>Игнатий Гриневицкий</h2>
-        <p> - Роль: Бросил вторую бомбу, смертельно ранившую императора.  </p>
-        <p> - Место: Стоял у решетки Екатерининского канала (канал Грибоедова). </p>  
-        <p> - Действия: Когда Александр II подошёл ближе, 
-            Гриневицкий бросил бомбу под ноги царю. 
-            Взрывом императору оторвало ноги, 
-            а сам террорист получил смертельные ранения и умер в тот же день.
-        </p> 
-        
+            <ul class="conspirators-list">
+                <li><button class="conspirator-btn" data-target="modal-grinevitsky">Игнатий Гриневицкий (Метельский)</button></li>
+                <li><button class="conspirator-btn" data-target="modal-rysakov">Николай Рысаков</button></li>
+                <li><button class="conspirator-btn" data-target="modal-perovskaya">Софья Перовская</button></li>
+                <li><button class="conspirator-btn" data-target="modal-zhelyabov">Андрей Желябов</button></li>
+                <li><button class="conspirator-btn" data-target="modal-reserves">Запасные метальщики</button></li>
+            </ul>
+    </div>
+
+    <div id="modal-grinevitsky" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+                <h2>Игнатий Гриневицкий</h2>
+                <p> - Роль: Бросил вторую бомбу, смертельно ранившую императора.  </p>
+                <p> - Место: Стоял у решетки Екатерининского канала (канал Грибоедова). </p>  
+                <p> - Действия: Когда Александр II подошёл ближе, 
+                Гриневицкий бросил бомбу под ноги царю. 
+                Взрывом императору оторвало ноги, 
+                а сам террорист получил смертельные ранения и умер в тот же день.
+         </p> 
     </div>
 </div>
 
 <div id="modal-rysakov" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
-        <h2>Николай Рысаков</h2>
-        <p> - Роль: Бросил первую бомбу, но она лишь ранила охрану.  </p>
-        <p> - Место: Находился на набережной Екатерининского канала.  </p>
-        <p> - Действия: Бросил снаряд в царскую карету,
-             но Александр II не пострадал.
-             После взрыва был схвачен казаками и городовыми. 
-        </p>
+            <h2>Николай Рысаков</h2>
+            <p> - Роль: Бросил первую бомбу, но она лишь ранила охрану.  </p>
+            <p> - Место: Находился на набережной Екатерининского канала.  </p>
+            <p> - Действия: Бросил снаряд в царскую карету,
+                 но Александр II не пострадал.
+                 После взрыва был схвачен казаками и городовыми. 
+         </p>
     </div>
-</div> 
+</div>
+
 <div id="modal-perovskaya" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
-        <h2>Софья Перовская</h2>
-        <p> - Роль: Организатор и координатор покушения.  
-        <p> - Место: Находилась на противоположном берегу канала, подавала сигналы (платком) о приближении царя.</p> 
-        <p> - Действия: Контролировала процесс, давала знаки бомбометателям, когда нужно атаковать. </p>
+            <h2>Софья Перовская</h2>
+            <p> - Роль: Организатор и координатор покушения.  
+            <p> - Место: Находилась на противоположном берегу канала, подавала сигналы (платком) о приближении царя.</p> 
+            <p> - Действия: Контролировала процесс, давала знаки бомбометателям, когда нужно атаковать. </p>
     </div>
 </div>
+
 <div id="modal-zhelyabov" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
-        <h2>Андрей Желябов</h2>
-        <p> - Роль: Главный организатор покушения.  
-        <p> - Где был: Арестован за 2 дня до убийства (27 февраля), но его планы были уже приведены в действие.  </p>
-        <p> - Действия: Разработал операцию, подобрал исполнителей, но сам не участвовал непосредственно в нападении. </p>
+            <h2>Андрей Желябов</h2>
+            <p> - Роль: Главный организатор покушения.  
+            <p> - Где был: Арестован за 2 дня до убийства (27 февраля), но его планы были уже приведены в действие.  </p>
+            <p> - Действия: Разработал операцию, подобрал исполнителей, но сам не участвовал непосредственно в нападении. </p>
     </div>
 </div>
+
 <div id="modal-reserves" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
-        <h2> Запасные метальщики</h2>
-        <p> Запасные метальщики:  
-        <p> - Тимофей Михайлов – стоял в резерве, но не бросил бомбу.  </p>
-        <p> - Иван Емельянов – также был на месте, но не участвовал в атаке. </p>
+            <h2> Запасные метальщики</h2>
+            <p> Запасные метальщики:  
+            <p> - Тимофей Михайлов – стоял в резерве, но не бросил бомбу.  </p>
+            <p> - Иван Емельянов – также был на месте, но не участвовал в атаке. </p>
     </div>
 </div>
 </div>
@@ -380,80 +367,84 @@
     <div id="modal-info-1" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
-        <h2>1. Зимний дворец — начало маршрута</h2>
-        <p><strong>1 марта 1881 года, 12:45</strong></p>
-        <p>Александр II выехал из Зимнего дворца в Михайловский манеж для участия в разводе караулов. Это было его обычное воскресное мероприятие.</p>
-        <p>Интересный факт: в этот день император отменил утренний прием министра внутренних дел Лорис-Меликова, где должен был обсуждаться проект конституции.</p>
+            <h2>1. Зимний дворец — начало маршрута</h2>
+            <p><strong>1 марта 1881 года, 12:45</strong></p>
+            <p>Александр II выехал из Зимнего дворца в Михайловский манеж для участия в разводе караулов. Это было его обычное воскресное мероприятие.</p>
+            <p>Интересный факт: в этот день император отменил утренний прием министра внутренних дел Лорис-Меликова, где должен был обсуждаться проект конституции.</p>
     </div>
 </div>
+
 <div id="modal-info-2" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
-        <h2>2. Первое покушение: выстрел Соловьёва</h2>
-        <p><strong>2 апреля 1879 года</strong></p>
-        <p>Александр Соловьёв, член "Земли и воли", совершил первое из шести покушений на Александра II, выпустив пять пуль из револьвера.</p>
-        <p>Император уцелел благодаря зигзагообразному бегу. Этот эпизод заставил его сократить публичные выходы и усилить охрану.</p>
+            <h2>2. Первое покушение: выстрел Соловьёва</h2>
+            <p><strong>2 апреля 1879 года</strong></p>
+            <p>Александр Соловьёв, член "Земли и воли", совершил первое из шести покушений на Александра II, выпустив пять пуль из револьвера.</p>
+            <p>Император уцелел благодаря зигзагообразному бегу. Этот эпизод заставил его сократить публичные выходы и усилить охрану.</p>
     </div>
 </div>
+
 <div id="modal-info-3" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
-        <h2>3. План минирования Каменного моста</h2>
-        <p><strong>Лето 1880 года</strong></p>
-        <p>Желябов разработал план подрыва моста при проезде царского кортежа. Под мост были опущены:</p>
-        <ul>
-            <li>4 резиновых мешка с 65 кг динамита</li>
-            <li>Гальваническая батарея для подрыва</li>
-        </ul>
+            <h2>3. План минирования Каменного моста</h2>
+            <p><strong>Лето 1880 года</strong></p>
+            <p>Желябов разработал план подрыва моста при проезде царского кортежа. Под мост были опущены:</p>
+            <ul>
+                <li>4 резиновых мешка с 65 кг динамита</li>
+                <li>Гальваническая батарея для подрыва</li>
+            </ul>
         <p>План отменили из-за изменения маршрута императора.</p>
+        </div>
     </div>
-</div>
-</div>
+
 <div id="modal-info-4" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
-        <h2>4. Подкоп под Малой Садовой</h2>
-        <p><strong>Ноябрь 1880 - февраль 1881</strong></p>
-        <h3>Организация:</h3>
-        <ul>
-            <li>Лавка арендована под видом сырной торговли</li>
-            <li>Подкоп велся ночами в течение 3 месяцев</li>
-            <li>Вывезено 64 куб.м земли (замаскировано под товар)</li>
-        </ul>
+            <h2>4. Подкоп под Малой Садовой</h2>
+            <p><strong>Ноябрь 1880 - февраль 1881</strong></p>
+            <h3>Организация:</h3>
+            <ul>
+                <li>Лавка арендована под видом сырной торговли</li>
+                <li>Подкоп велся ночами в течение 3 месяцев</li>
+                <li>Вывезено 64 куб.м земли (замаскировано под товар)</li>
+            </ul>
         <h3>Технические детали:</h3>
-        <p>Заложено 96 кг динамита с электродетонатором. Взрывное устройство так и не было использовано - царь изменил маршрут.</p>
-        <p><em>Интересно:</em> Хозяйка лавки позже свидетельствовала, что "купцы" интересовались только подвалом.</p>
+            <p>Заложено 96 кг динамита с электродетонатором. Взрывное устройство так и не было использовано - царь изменил маршрут.</p>
+            <p><em>Интересно:</em> Хозяйка лавки позже свидетельствовала, что "купцы" интересовались только подвалом.</p>
     </div>
 </div>
+
 <div id="modal-info-5" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
-        <h2>5. Альтернативный маршрут через Невский</h2>
-        <p><strong>Утро 1 марта 1881</strong></p>
-        <p>По данным наблюдений Перовской, император обычно следовал в Манеж:</p>
+            <h2>5. Альтернативный маршрут через Невский</h2>
+            <p><strong>Утро 1 марта 1881</strong></p>
+            <p>По данным наблюдений Перовской, император обычно следовал в Манеж:</p>
         <ol>
             <li>По Невскому проспекту</li>
-            <li>Через Казанский мост</li>
+                <li>Через Казанский мост</li>
             <li>По Малой Садовой (где ждал подкоп)</li>
         </ol>
-        <p>В этот день кучер получил приказ ехать через Певческий мост - это сорвало первоначальный план террористов.</p>
-        <p><em>Деталь:</em> На Невском дежурил метальщик Тимофей Михайлов с запасной бомбой.</p>
+            <p>В этот день кучер получил приказ ехать через Певческий мост - это сорвало первоначальный план террористов.</p>
+            <p><em>Деталь:</em> На Невском дежурил метальщик Тимофей Михайлов с запасной бомбой.</p>
     </div>
 </div>
+
 <div id="modal-info-6" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
-        <h2>6. Неожиданный поворот на Певческий мост</h2>
-        <p><strong>13:10, 1 марта</strong></p>
-        <p>Причины изменения маршрута:</p>
+            <h2>6. Неожиданный поворот на Певческий мост</h2>
+            <p><strong>13:10, 1 марта</strong></p>
+            <p>Причины изменения маршрута:</p>
         <ul>
             <li>Желание избежать скопления народа на Невском</li>
             <li>Более короткий путь через Дворцовую площадь</li>
         </ul>
-        <p>Это решение:</p>
+            <p>Это решение:</p>
         <ul>
             <li>Спасло жизнь Александру II утром</li>
-            <li>Вынудило террористов импровизировать</li>
+                <li>Вынудило террористов импровизировать</li>
             <li>Привело кортеж к Екатерининскому каналу</li>
         </ul>
     </div>
@@ -461,19 +452,19 @@
 <div id="modal-info-7" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
-        <h2>7. Пересечение с Екатерининским каналом</h2>
-        <p><strong>13:15, 1 марта</strong></p>
-        <p>Критическая точка маршрута:</p>
+            <h2>7. Пересечение с Екатерининским каналом</h2>
+            <p><strong>13:15, 1 марта</strong></p>
+            <p>Критическая точка маршрута:</p>
         <table>
             <tr><th>Фактор</th><th>Значение</th></tr>
-            <tr><td>Ширина моста</td><td>Всего 18 м</td></tr>
-            <tr><td>Скорость кортежа</td><td>Не более 10 км/ч</td></tr>
+                <tr><td>Ширина моста</td><td>Всего 18 м</td></tr>
+                <tr><td>Скорость кортежа</td><td>Не более 10 км/ч</td></tr>
             <tr><td>Дистанция до воды</td><td>3.5 м</td></tr>
         </table>
-        
-        <p>Именно здесь Перовская впервые увидела царскую карету и начала подавать сигналы.</p>
+            <p>Именно здесь Перовская впервые увидела царскую карету и начала подавать сигналы.</p>
     </div>
 </div>
+
 <div id="modal-info-8" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
@@ -488,6 +479,7 @@
         <p>Карета замедлилась до 5 км/ч, что сделало её идеальной мишенью.</p>
     </div>
 </div>
+
 <div id="modal-info-9" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
@@ -502,108 +494,115 @@
         <p><em>Важно:</em> После манежа император решил заехать к кузине, что изменило обратный маршрут.</p>
     </div>
 </div>
+
 <div id="modal-info-10" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
-        <h2>10. Возвращение через сквер</h2>
-        <p><strong>14:05, 1 марта</strong></p>
-        <p>Особенности местности:</p>
+            <h2>10. Возвращение через сквер</h2>
+             <p><strong>14:05, 1 марта</strong></p>
+             <p>Особенности местности:</p>
         <ul>
-            <li>Булыжная мостовая (плохая амортизация)</li>
-            <li>Открытое пространство для обзора</li>
-            <li>Решётка канала как естественная преграда</li>
+         <li>Булыжная мостовая (плохая амортизация)</li>
+         <li>Открытое пространство для обзора</li>
+         <li>Решётка канала как естественная преграда</li>
         </ul>
         <p>Именно здесь Рысаков впервые увидел приближающуюся карету.</p>
     </div>
 </div>
+
 <div id="modal-info-11" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
-        <h2>11. Визит к Великой княгине</h2>
-        <p><strong>14:00-14:10, 1 марта</strong></p>
-        <p>Детали визита:</p>
+            <h2>11. Визит к Великой княгине</h2>
+             <p><strong>14:00-14:10, 1 марта</strong></p>
+             <p>Детали визита:</p>
         <ul>
-            <li>Продолжительность: ровно 12 минут</li>
-            <li>Обсуждали: здоровье княгини и семейные дела</li>
-            <li>Охрана: оставалась у входа</li>
+             <li>Продолжительность: ровно 12 минут</li>
+             <li>Обсуждали: здоровье княгини и семейные дела</li>
+             <li>Охрана: оставалась у входа</li>
         </ul>
-        <p>Этот неожиданный визит дал террористам время занять новые позиции.</p>
+            <p>Этот неожиданный визит дал террористам время занять новые позиции.</p>
     </div>
 </div>
+
 <div id="modal-info-12" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
-        <h2>12. Решающая передислокация</h2>
-        <p><strong>14:05-14:10, 1 марта</strong></p>
-        <p>Действия Перовской:</p>
+            <h2>12. Решающая передислокация</h2>
+             <p><strong>14:05-14:10, 1 марта</strong></p>
+             <p>Действия Перовской:</p>
         <ol>
             <li>Подняла белый платок - сигнал к перегруппировке</li>
-            <li>Распределила метальщиков вдоль канала</li>
+             <li>Распределила метальщиков вдоль канала</li>
             <li>Лично указала Гриневицкому ключевую позицию</li>
         </ol>
-        <p>Всего на набережной заняли позиции 4 бомбометателя.</p>
+            <p>Всего на набережной заняли позиции 4 бомбометателя.</p>
     </div>
 </div>
+
 <div id="modal-info-13" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
-        <h2>13. Последний отрезок пути</h2>
-        <p><strong>14:12, 1 марта</strong></p>
-        <p>Параметры движения:</p>
+            <h2>13. Последний отрезок пути</h2>
+             <p><strong>14:12, 1 марта</strong></p>
+             <p>Параметры движения:</p>
         <table>
-            <tr><th>Параметр</th><th>Значение</th></tr>
-            <tr><td>Скорость</td><td>7 км/ч</td></tr>
-            <tr><td>Дистанция до цели</td><td>280 м</td></tr>
-            <tr><td>Состав охраны</td><td>6 казаков, 2 полицейских</td></tr>
+             <tr><th>Параметр</th><th>Значение</th></tr>
+             <tr><td>Скорость</td><td>7 км/ч</td></tr>
+             <tr><td>Дистанция до цели</td><td>280 м</td></tr>
+             <tr><td>Состав охраны</td><td>6 казаков, 2 полицейских</td></tr>
         </table>
-        <p>Карета двигалась так медленно из-за повреждений от первой бомбы.</p>
+            <p>Карета двигалась так медленно из-за повреждений от первой бомбы.</p>
     </div>
 </div>
+
 <div id="modal-info-14" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
-        <h2>14. Роковой взрыв на набережной</h2>
-        <p><strong>14:15, 1 марта 1881 года</strong></p>
-        <h3>Хронология событий:</h3>
+            <h2>14. Роковой взрыв на набережной</h2>
+            <p><strong>14:15, 1 марта 1881 года</strong></p>
+            <h3>Хронология событий:</h3>
         <ol>
             <li><strong>14:10</strong> — Рысаков бросает первую бомбу (повреждена карета, ранены охранники)</li>
-            <li><strong>14:12</strong> — Александр II выходит осмотреть раненых</li>
+             <li><strong>14:12</strong> — Александр II выходит осмотреть раненых</li>
             <li><strong>14:15</strong> — Гриневицкий бросает вторую бомбу под ноги императору</li>
         </ol>
-        <h3>Последствия:</h3>
+            <h3>Последствия:</h3>
         <ul>
             <li>Императору раздроблены обе ноги, поврежден живот</li>
-            <li>Гриневицкий смертельно ранен осколками</li>
+             <li>Гриневицкий смертельно ранен осколками</li>
             <li>8 случайных прохожих ранено</li>
         </ul>
         <p>Смерть наступила в 15:35 в Зимнем дворце. Последние слова: "Во дворец... Там умереть..."</p>
     </div>
 </div>
 </div>
+
 <div id="modal-info-15" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
-        <h2>15. Последний путь императора</h2>
-        <p><strong>14:30-15:35, 1 марта</strong></p>
-        <h3>Трагическая процессия:</h3>
+            <h2>15. Последний путь императора</h2>
+            <p><strong>14:30-15:35, 1 марта</strong></p>
+            <h3>Трагическая процессия:</h3>
         <ul>
             <li>Дистанция: 1.2 км</li>
-            <li>Транспорт: санитарные носилки</li>
+             <li>Транспорт: санитарные носилки</li>
             <li>Сопровождение: плачущая толпа</li>
         </ul>
         <h3>Медицинские факты:</h3>
         <p>Причины смерти:</p>
         <ol>
             <li>Потеря крови (разрыв бедренной артерии)</li>
-            <li>Травматический шок</li>
+             <li>Травматический шок</li>
             <li>Осколочные ранения живота</li>
         </ol>
         <p>Официальное время смерти: 15:35 по дворцовым часам.</p>
     </div>
 </div>
-
 </div> 
 </div>
     <script src="js.js"></script>
+    <script>
+    </script>
 </body>
 </html>
