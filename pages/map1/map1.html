@@ -34,10 +34,10 @@
                 <li><button class="info-btn" data-target="modal-info-4">4. Сырная лавка</button></li>
                 <li><button class="info-btn" data-target="modal-info-5">5. Невский проспект</button></li>
                 <li><button class="info-btn" data-target="modal-info-6">6. Певченский мост</button></li>
-                <li><button class="info-btn" data-target="modal-info-7">7. Театральный мост</button></li>
+                <li><button class="info-btn" data-target="modal-info-7">7. Тройной мост</button></li>
                 <li><button class="info-btn" data-target="modal-info-8">8. Итальянская улица</button></li>
                 <li><button class="info-btn" data-target="modal-info-9">9. Михайловский манеж</button></li>
-                <li><button class="info-btn" data-target="modal-info-10">10. Михайловский сквер</button></li>
+                <li><button class="info-btn" data-target="modal-info-10">10. Площадь Искусств</button></li>
                 <li><button class="info-btn" data-target="modal-info-11">11. Михайловский дворец</button></li>
                 <li><button class="info-btn" data-target="modal-info-12">12. Перегруппировка</button></li>
                 <li><button class="info-btn" data-target="modal-info-13">13. Обратный путь</button></li>
@@ -88,112 +88,113 @@
         });
     
         const placemarks = [
-            {
-                coords: [59.9404, 30.3139], // 1
-                properties: {
-                    hintContent: '1. Зимний дворец / Дворцовая площадь',
-                    balloonContent: 'Тут всё началось, отсюда начал свой путь царя'
-                }
-            },
-            {
-                coords: [59.9398, 30.3188], // 2
-                properties: {
-                    hintContent: '2. Место покушения Александра Соловьёва',
-                    balloonContent: 'Террорист-одиночка выстрелил в царя, и промахнулся, лишь одна пуля слегка надорвала шинель'
-                }
-            },
-            {
-                coords: [59.9304, 30.3191], // 3
-                properties: {
-                    hintContent: '3. План взрыва Каменного моста',
-                    balloonContent: 'Стрелять в царя было невозможно, он не рисковал выходить на улицу. Под Каменный мост были опущены особые подушки,наполненные динамитом, Баранников и Желябов погрузили их под воду, чтобы при проезде царя подорвать мост'
-                }
-            },
-            {
-                coords: [59.9342, 30.3382], // 4
-                properties: {
-                    hintContent: '4. Сырная лавка на Малой Садовой',
-                    balloonContent: 'Место 2 мины. Было выбрано более удобное место в связи частыми визитами в Михайловский манеж, арендовано помещение под сырную лавку, был вырот подкоп под улицу где была заложена мина в ночь на 1 марта 1881г.'
-                }
-            },
-            {
-                coords: [59.9342, 30.3352], // 5
-                properties: {
-                    hintContent: '5. Невский проспект',
-                    balloonContent: 'Император должен был проехать к манежу через Невский проспект. Об этом утром 1 марта рассказывала товарищам Софья Перовская'
-                }
-            },
-            { 
-                coords: [59.9401, 30.3194], // 6
-                properties: { 
-                    hintContent: '6. Певченский мост', 
-                    balloonContent: 'Садясь в карету, приказал лейб-кучеру Сергееву ехать через Певческий мост, а не по Невскому проспекту,что порушило все планы террористов'
-                } 
-            }, 
-            { 
-                coords: [59.9416, 30.3289], // 7 
-                properties: { 
-                    hintContent: '7. Театральный мост', 
-                    balloonContent: 'Маршут через Певченский мост означал, что кучер должен будет свернуть к Театральному мосту' 
-                } 
-            }, 
-            { 
-                coords: [59.9371, 30.3273], // 8
-                properties: { 
-                    hintContent: '8. Поворт на большую Итальянскую улицу', 
-                    balloonContent: 'Выезжать на Невский пр. на этом маршруте не имело смысла.Проехав мимо будущего места покушения,карета императора повернула на Большую Итальянскую улицу' 
-                } 
-            }, 
-            { 
-                coords: [59.9359, 30.3408],// 9
-                properties: { 
-                    hintContent: '9. Михайловский манеж', 
-                    balloonContent: 'Манежная площадь,где в здании площади проходил развод войск. Михаил Фроленко ждал царя в сырной лавке, Якимова вышла узнать в чем дело,вернулась,поехали на канал. Лавка стала не нужна, Фроленко ушел' 
-                } 
-            }, 
-            { 
-                coords: [59.9371, 30.3315],// 10
-                properties: {
-                    hintContent: '10. Обратный путь. Михайловский сквер',
-                    balloonContent: 'Развод войск кончился, Александр II сел в карету и "изволил отправится по Большой Итальянской улице,через Михайловскую площадь во дворец Екатерины Михайловны'
-                }
-            }, 
-            { 
-                coords: [59.9385, 30.3323], // 11
-                properties: { 
-                    hintContent: '11. Михайловский дворец', 
-                    balloonContent: 'Сегодня там Русский музей,в 1881г тут жила Екатерина Михайловна,двоюродная сестра царя. После смерти императора, Екатерина откроет тут столовую для бедных.' 
-                } 
-            }, 
-            { 
-                coords: [59.9367, 30.3314], // 12
-                properties: { 
-                    hintContent: '12. Перегрупировка', 
-                    balloonContent: 'Частые визиты императора в Михайловский дворец дали возможность террористам перегрупироваться. Софья Перовская рассказывала что выслеживала, куда направился царь,увидев что царь отправился в дворец, она подала знак,означавший что люди со снарядами должны направится на Екатериненский канал как было оговорено заранее' 
-                } 
-            }, 
-            { 
-                coords: [59.9383, 30.3279], // 13
-                properties: { 
-                    hintContent: '13. Домой обратной дорогой', 
-                    balloonContent: 'царь,после получасового визита у сестры, приказал кучеру ехать обратно той же дорогой, через Екатериненский канал, проехав по Инженерной улице. По словам Николая Рысакова который был "бомбистом" и стоял ближе всех к карете :"он уже пол часа ходил вдоль канала"' 
-                } 
-            }, 
-            { 
-                coords: [59.9401, 30.3283], // 14
-                properties: { 
-                    hintContent: '14. Место убийства', 
-                    balloonContent: 'Примерно 14:15. Николай рысаков бросил бомбу под карету царя, повредилась задняя часть, царь не стал покидать место теракта, вышел из кареты,осмотрел место взрыва и даже на Рысакова. Вторая бомба была брошена Игнатием Гриневицким. Царь смертельно ранен,Игнат погиб.' 
-                } 
-            }, 
-            { 
-                coords: [59.9401, 30.3142], // 15 
-                properties: { 
-                    hintContent: '15. и снова зимний дворец..', 
-                    balloonContent: 'Михаил Фроленко писал, что Александр II умер по дороге до Зимнего дворца. Именно туда повезли императора по его же просьба. Императорский штандарт был спущен в 15:35 - это стало официальным временем кончины Александра II. Всё кончено, народники осуществили свой план,царь пал..' 
-                } 
-            }  
-        ];
+    {
+        coords: [59.9404, 30.3139],
+        properties: {
+            hintContent: '1. Зимний дворец / Дворцовая площадь',
+            balloonContent: 'Тут всё началось - отсюда Александр II начал свой роковой путь 1 марта 1881 года.'
+        }
+    },
+    {
+        coords: [59.9398, 30.3188],
+        properties: {
+            hintContent: '2. Место покушения Александра Соловьёва',
+            balloonContent: '2 апреля 1879 года здесь, у здания штаба Гвардейского корпуса, на императора совершил покушение террорист-одиночка Александр Соловьёв. Царь чудом уцелел, убегая зигзагами от пуль.'
+        }
+    },
+    {
+        coords: [59.9304, 30.3191],
+        properties: {
+            hintContent: '3. План взрыва Каменного моста',
+            balloonContent: 'Летом 1880 года народовольцы заложили мину под мост, но Александр II уехал в Крым. Динамитные заряды, обнаруженные позже, остались нетронутыми.'
+        }
+    },
+    {
+        coords: [59.9342, 30.3382],
+        properties: {
+            hintContent: '4. Сырная лавка на Малой Садовой',
+            balloonContent: 'Здесь народовольцы арендовали помещение под сырную лавку и прорыли подкоп, заложив мину. Позже на этом месте построили Елисеевский магазин.'
+        }
+    },
+    {
+        coords: [59.9342, 30.3352],
+        properties: {
+            hintContent: '5. Невский проспект',
+            balloonContent: 'По первоначальному плану царь должен был проехать по Невскому. Софья Перовская даже нарисовала схему маршрута на конверте.'
+        }
+    },
+    { 
+        coords: [59.9401, 30.3194],
+        properties: { 
+            hintContent: '6. Певческий мост', 
+            balloonContent: 'Вопреки ожиданиям заговорщиков, Александр II приказал ехать через Певческий мост, изменив привычный маршрут.' 
+        } 
+    },
+    { 
+        coords: [59.9416, 30.3289],
+        properties: { 
+            hintContent: '7. Театральный мост', 
+            balloonContent: 'Изменение маршрута означало, что карета проследует к Театральному мосту через Екатерининский канал.' 
+        } 
+    },
+    { 
+        coords: [59.9371, 30.3273],
+        properties: { 
+            hintContent: '8. Поворот на Большую Итальянскую улицу', 
+            balloonContent: 'Карета императора повернула на Большую Итальянскую, минуя Невский проспект.' 
+        } 
+    },
+    { 
+        coords: [59.9359, 30.3408],
+        properties: { 
+            hintContent: '9. Михайловский манеж', 
+            balloonContent: 'После смотра в манеже Александр II отправился к сестре. Услышав крик "Поехал на канал!", заговорщики покинули сырную лавку.' 
+        } 
+    },
+    { 
+        coords: [59.9371, 30.3315],
+        properties: {
+            hintContent: '10. Обратный путь. Михайловский сквер',
+            balloonContent: 'В хорошем настроении после визита к сестре, император отправился обратно тем же маршрутом вдоль канала.'
+        }
+    },
+    { 
+        coords: [59.9385, 30.3323],
+        properties: { 
+            hintContent: '11. Михайловский дворец', 
+            balloonContent: 'Ныне Русский музей. В 1881 году здесь жила сестра царя Екатерина Михайловна, известная благотворительностью.' 
+        }
+    },
+    { 
+        coords: [59.9367, 30.3314],
+        properties: { 
+            hintContent: '12. Перегруппировка', 
+            balloonContent: 'Перовская, увидев изменение маршрута, подала сигнал платком - бомбометателям следовать к каналу.' 
+        } 
+    },
+    { 
+        coords: [59.9383, 30.3279],
+        properties: { 
+            hintContent: '13. Обратный путь по набережной', 
+            balloonContent: 'Карета с императором проследовала обратно по набережной Екатерининского канала, где её ждали народовольцы.' 
+        }
+    },
+    { 
+        coords: [59.9401, 30.3283],
+        properties: { 
+            hintContent: '14. Место убийства', 
+            balloonContent: 'Здесь в 14:15 Рысаков бросил первую бомбу, а Гриневицкий - вторую, смертельно ранив императора.' 
+        } 
+    },
+    { 
+        coords: [59.9401, 30.3142],
+        properties: { 
+            hintContent: '15. Возвращение в Зимний дворец', 
+            balloonContent: 'Смертельно раненого Александра II повезли во дворец, где он скончался в 15:35. Гриневицкий умер вечером того же дня.' 
+        } 
+    }
+];
+        
     
         const markers = [];
         
@@ -298,10 +299,10 @@
       <div class="bottom-section">
           <p>ФИО участников заговора: </p>
             <ul class="conspirators-list">
-                <li><button class="conspirator-btn" data-target="modal-grinevitsky">Игнатий Гриневицкий (Метельский)</button></li>
-                <li><button class="conspirator-btn" data-target="modal-rysakov">Николай Рысаков</button></li>
-                <li><button class="conspirator-btn" data-target="modal-perovskaya">Софья Перовская</button></li>
-                <li><button class="conspirator-btn" data-target="modal-zhelyabov">Андрей Желябов</button></li>
+                <li><button class="conspirator-btn" data-target="modal-grinevitsky">Гриневицкий (Метельский) Игнатий  Иоахимович</button></li>
+                <li><button class="conspirator-btn" data-target="modal-rysakov">Рысаков Николай  Иванович</button></li>
+                <li><button class="conspirator-btn" data-target="modal-perovskaya">Перовская Софья Львовна </button></li>
+                <li><button class="conspirator-btn" data-target="modal-zhelyabov">Желябов Андрей Иванович</button></li>
                 <li><button class="conspirator-btn" data-target="modal-reserves">Запасные метальщики</button></li>
             </ul>
     </div>
@@ -309,7 +310,8 @@
     <div id="modal-grinevitsky" class="modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
-                <h2>Игнатий Гриневицкий</h2>
+            <img src="../map1/img/3-narodovolecignatij.800.jpg">
+                <h2>Игнатий Гриневицкий Иоахимович</h2>
                 <p> - Роль: Бросил вторую бомбу, смертельно ранившую императора.  </p>
                 <p> - Место: Стоял у решетки Екатерининского канала (канал Грибоедова). </p>  
                 <p> - Действия: Когда Александр II подошёл ближе, 
@@ -323,7 +325,8 @@
 <div id="modal-rysakov" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
-            <h2>Николай Рысаков</h2>
+        <img src="../map1/img/Ni_rysakov.jpg">
+            <h2>Рысаков Николай Иванович</h2>
             <p> - Роль: Бросил первую бомбу, но она лишь ранила охрану.  </p>
             <p> - Место: Находился на набережной Екатерининского канала.  </p>
             <p> - Действия: Бросил снаряд в царскую карету,
@@ -336,7 +339,8 @@
 <div id="modal-perovskaya" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
-            <h2>Софья Перовская</h2>
+        <img src="../map1/img/S_Perovskaya.jpg">  
+        <h2>Софья Перовская Львовна</h2>
             <p> - Роль: Организатор и координатор покушения.  
             <p> - Место: Находилась на противоположном берегу канала, подавала сигналы (платком) о приближении царя.</p> 
             <p> - Действия: Контролировала процесс, давала знаки бомбометателям, когда нужно атаковать. </p>
@@ -345,8 +349,9 @@
 
 <div id="modal-zhelyabov" class="modal">
     <div class="modal-content">
-        <span class="close-btn">&times;</span>
-            <h2>Андрей Желябов</h2>
+        <span class="close-btn">&times;</span> 
+        <img src="../map1/img/800px-Zhelyabov.jpg">
+            <h2>Желябов Андрей Иванович</h2>
             <p> - Роль: Главный организатор покушения.  
             <p> - Где был: Арестован за 2 дня до убийства (27 февраля), но его планы были уже приведены в действие.  </p>
             <p> - Действия: Разработал операцию, подобрал исполнителей, но сам не участвовал непосредственно в нападении. </p>
@@ -355,18 +360,21 @@
 
 <div id="modal-reserves" class="modal">
     <div class="modal-content">
-        <span class="close-btn">&times;</span>
+        <span class="close-btn">&times;</span> 
+        <img src="../map1/img/Mikhailov_tm.jpg">
+        <img src="../map1/img/Emelyanov_Ivan_Panteleymonovich.jpg">
             <h2> Запасные метальщики</h2>
             <p> Запасные метальщики:  
-            <p> - Тимофей Михайлов – стоял в резерве, но не бросил бомбу.  </p>
-            <p> - Иван Емельянов – также был на месте, но не участвовал в атаке. </p>
+            <p> - Михайлов Тимофей Михайлович – стоял в резерве, но не бросил бомбу.</p>
+            <p> - Емельянов Иван Пантелеймонович – также был на месте,но не участвовал в атаке.</p>
     </div>
 </div>
 </div>
 
     <div id="modal-info-1" class="modal">
     <div class="modal-content">
-        <span class="close-btn">&times;</span>
+        <span class="close-btn">&times;</span> 
+        <img src="../map1/img/dborez.jpg">
             <h2>1. Зимний дворец — начало маршрута</h2>
             <p><strong>1 марта 1881 года, 12:45</strong></p>
             <p>Александр II выехал из Зимнего дворца в Михайловский манеж для участия в разводе караулов. Это было его обычное воскресное мероприятие.</p>
@@ -377,6 +385,8 @@
 <div id="modal-info-2" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
+        <img src="../map1/img/411px-Soloviev_AK.jpg">
+        <img src="../map1/img/pokuhenie.jpg">
             <h2>2. Первое покушение: выстрел Соловьёва</h2>
             <p><strong>2 апреля 1879 года</strong></p>
             <p>Александр Соловьёв, член "Земли и воли", совершил первое из шести покушений на Александра II, выпустив пять пуль из револьвера.</p>
@@ -387,6 +397,7 @@
 <div id="modal-info-3" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
+        <img src="../map1/img/most.jpg">
             <h2>3. План минирования Каменного моста</h2>
             <p><strong>Лето 1880 года</strong></p>
             <p>Желябов разработал план подрыва моста при проезде царского кортежа. Под мост были опущены:</p>
@@ -401,6 +412,7 @@
 <div id="modal-info-4" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
+        <img src="../map1/img/lavka.jpg">
             <h2>4. Подкоп под Малой Садовой</h2>
             <p><strong>Ноябрь 1880 - февраль 1881</strong></p>
             <h3>Организация:</h3>
@@ -418,14 +430,15 @@
 <div id="modal-info-5" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
+        <img src="../map1/img/nevskiy.jpg">
             <h2>5. Альтернативный маршрут через Невский</h2>
             <p><strong>Утро 1 марта 1881</strong></p>
             <p>По данным наблюдений Перовской, император обычно следовал в Манеж:</p>
-        <ol>
+        
             <li>По Невскому проспекту</li>
                 <li>Через Казанский мост</li>
             <li>По Малой Садовой (где ждал подкоп)</li>
-        </ol>
+        
             <p>В этот день кучер получил приказ ехать через Певческий мост - это сорвало первоначальный план террористов.</p>
             <p><em>Деталь:</em> На Невском дежурил метальщик Тимофей Михайлов с запасной бомбой.</p>
     </div>
@@ -434,6 +447,7 @@
 <div id="modal-info-6" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
+        <img src="../map1/img/pevmost.jpg">
             <h2>6. Неожиданный поворот на Певческий мост</h2>
             <p><strong>13:10, 1 марта</strong></p>
             <p>Причины изменения маршрута:</p>
@@ -452,6 +466,7 @@
 <div id="modal-info-7" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
+        <img src="../map1/img/teatrmost.jpg">
             <h2>7. Пересечение с Екатерининским каналом</h2>
             <p><strong>13:15, 1 марта</strong></p>
             <p>Критическая точка маршрута:</p>
@@ -468,6 +483,7 @@
 <div id="modal-info-8" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
+        <img src="../map1/img/italiano.jpg">
         <h2>8. Роковой поворот на Итальянскую</h2>
         <p><strong>13:20, 1 марта</strong></p>
         <h3>Почему это стало ошибкой:</h3>
@@ -483,6 +499,7 @@
 <div id="modal-info-9" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
+        <img src="../map1/img/manej.webp">
         <h2>9. Церемония в Манеже</h2>
         <p><strong>13:30-14:00, 1 марта</strong></p>
         <p>В это время:</p>
@@ -498,6 +515,7 @@
 <div id="modal-info-10" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
+        <img src="../map1/img/da.jpg">
             <h2>10. Возвращение через сквер</h2>
              <p><strong>14:05, 1 марта</strong></p>
              <p>Особенности местности:</p>
@@ -513,6 +531,7 @@
 <div id="modal-info-11" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
+        <img src="../map1/img/mihdvor.jpg">
             <h2>11. Визит к Великой княгине</h2>
              <p><strong>14:00-14:10, 1 марта</strong></p>
              <p>Детали визита:</p>
@@ -528,6 +547,7 @@
 <div id="modal-info-12" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
+        <img src="../map1/img/platok.webp">
             <h2>12. Решающая передислокация</h2>
              <p><strong>14:05-14:10, 1 марта</strong></p>
              <p>Действия Перовской:</p>
@@ -543,6 +563,7 @@
 <div id="modal-info-13" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
+        <img src="../map1/img/engyl.jpg">
             <h2>13. Последний отрезок пути</h2>
              <p><strong>14:12, 1 марта</strong></p>
              <p>Параметры движения:</p>
@@ -559,6 +580,7 @@
 <div id="modal-info-14" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
+        <img src="../map1/img/vzriw.webp">
             <h2>14. Роковой взрыв на набережной</h2>
             <p><strong>14:15, 1 марта 1881 года</strong></p>
             <h3>Хронология событий:</h3>
@@ -581,6 +603,7 @@
 <div id="modal-info-15" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
+        <img src="../map1/img/odr.jpg">
             <h2>15. Последний путь императора</h2>
             <p><strong>14:30-15:35, 1 марта</strong></p>
             <h3>Трагическая процессия:</h3>
